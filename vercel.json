@@ -1,4 +1,3 @@
 {
-  "buildCommand": "pnpm exec vite build",
-  "outputDirectory": ".output"
+  "buildCommand": "pnpm exec vite build"
 }
