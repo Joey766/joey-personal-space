@@ -1,22 +1,21 @@
 export const zh = {
   language: "中文 / EN",
-  nav: [{ label: "关于我", href: "#about" }, { label: "正在做", href: "#now" }, { label: "作品", href: "#projects" }, { label: "记录", href: "#notes" }, { label: "生活", href: "#life" }, { label: "职业", href: "/work" }],
-  welcome: { eyebrow: "罗敖杰 · 个人空间", title: ["欢迎进入", "我的个人空间"], line: "探索 · 构建 · 思考 · 记录", enter: "进入空间", projects: "查看作品" },
-  bottom: [{ number: "01", label: "探索", href: "#now" }, { number: "02", label: "构建", href: "#projects" }, { number: "03", label: "思考", href: "#notes" }, { number: "04", label: "生活", href: "#life" }],
-  about: { number: "01", title: "关于我", lead: "你好，我是罗敖杰。", copy: ["我喜欢把不同领域的事物连接起来。", "数学训练让我习惯拆解问题；AI 和产品让我把想法做成现实。"], facts: ["University of Waterloo\n数学 · 统计 · 风险管理", "目前关注\nAI · 产品 · Robotics · Quantitative Thinking"] },
-  now: { number: "02", title: "正在做", lead: "最近占据我时间与好奇心的事。", items: [{ title: "构建个人空间", copy: "持续迭代这个网站。" }, { title: "探索 AI 产品", copy: "思考 AI 如何进入真实工作流。" }, { title: "计算机视觉与机器人", copy: "探索视觉定位与具身智能。" }, { title: "量化与数据", copy: "用数学和统计理解现实问题。" }] },
-  projects: { number: "03", title: "作品与实验", lead: "一些我真正动手做过的事。", view: "查看作品", items: [{ title: "AI 机器人视觉定位系统", tags: "Python / OpenCV / YOLO / LeRobot" }, { title: "信用评级迁移模型", tags: "Python / Markov Chain / Credit Risk" }, { title: "Joey Luo Personal Space", tags: "Vibe Coding / Product Design" }] },
-  notes: { number: "04", title: "记录", lead: "一些值得留下来的想法。", copy: ["正在整理中。", "这里会记录项目复盘、产品想法与学习。"] },
-  life: { number: "05", title: "生活之外", lead: "屏幕、模型和数字以外，也有很多喜欢的事。", chess: { title: "国际象棋", meta: "FIDE Candidate Master (CM)", copy: "它让我享受长期思考与短期决策之间的张力。" }, interests: ["足球", "钢琴 · 英皇八级", "乒乓球", "篮球"], gallery: ["Chess photo", "Football photo", "Personal photo", "Travel photo"] },
-  career: { number: "06", title: "职业档案", lead: "从金融，到数据，再到 AI 与产品。", link: "查看完整职业档案" },
-  contact: { number: "07", title: "联系", copy: "如果你想聊项目、AI、产品或金融，欢迎联系我。", links: ["Email", "GitHub", "LinkedIn"] }
+  nav: [{ label: "探索", href: "#about" }, { label: "构建", href: "#projects" }, { label: "思考", href: "#notes" }, { label: "生活", href: "#life" }],
+  welcome: { eyebrow: "罗敖杰 · 个人空间", title: ["欢迎进入", "我的个人空间"], line: "探索 · 构建 · 思考 · 生活", enter: "进入空间", projects: "进入构建" },
+  bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "构建", href: "#projects" }, { number: "03", label: "思考", href: "#notes" }, { number: "04", label: "生活", href: "#life" }],
+  about: { number: "01", title: "探索", lead: "你好，我是罗敖杰。", copy: ["University of Waterloo 数学专业学生，主修金融分析与风险管理（FARM），专攻专业风险管理（PRM）。", "我探索 AI、数据与产品开发，并用数学的方式拆解问题、把想法做成现实。"], facts: ["University of Waterloo\nBachelor of Mathematics, Honours", "FARM · PRM\nAI · 数据 · 产品开发"] },
+  projects: { number: "02", title: "作品与实验", lead: "一些我真正动手做过的项目概览。", items: [{ title: "Zhiyue AI", copy: "AI 求职助手 / AI 职业智能平台", tags: "AI Product / LLM / Qwen3 / Ollama / Streamlit" }, { title: "AI机器人视觉定位系统", copy: "具身 AI 机器人项目", tags: "Python / OpenCV / YOLO / LeRobot" }, { title: "Joey Luo Personal Space", copy: "AI-native 个人网站", tags: "Vibe Coding / Product Design / Next.js / React / Three.js" }, { title: "信用评级迁移模型", copy: "量化风险建模项目", tags: "Python / Markov Chain / Credit Risk" }] },
+  notes: { number: "03", title: "思考", lead: "一些关于方法与协作方式的想法。", copy: ["数据驱动的思考，让判断建立在证据之上。", "AI-native 工作流、产品思维，以及人与 AI 的协作。"] },
+  life: { number: "04", title: "生活", lead: "技术之外，也有让我保持好奇与节奏的事。", chess: { title: "国际象棋", meta: "FIDE Candidate Master (CM)", copy: "它让我享受长期思考与短期决策之间的张力。" }, interests: ["足球", "篮球", "钢琴"], gallery: ["Chess photo", "Football photo", "Personal photo", "Travel photo"] },
+  career: { number: "05", title: "职业档案", lead: "从金融，到数据，再到 AI 与产品。", link: "查看完整职业档案" },
+  contact: { number: "06", title: "联系", copy: "如果你想聊项目、AI、产品或金融，欢迎联系我。", links: ["Email", "GitHub", "LinkedIn"] }
 };
 
 export const careerZh = {
   language: "中文 / EN", back: "返回个人空间", backToTop: "回到顶部", indexLabel: "职业档案目录",
   hero: { eyebrow: "职业档案 / CAREER", school: "University of Waterloo", direction: "数学 · AI · 产品 · Quantitative Thinking", intro: "一份关于学习、工作、项目与构建经历的完整记录。" },
   index: [{ label: "教育", href: "#education" }, { label: "经历", href: "#experience" }, { label: "项目", href: "#projects" }, { label: "技能", href: "#skills" }, { label: "校园", href: "#campus" }],
-  education: { number: "01 / 教育背景", title: "教育背景", year: "2022—2027", school: "University of Waterloo", degree: "数学荣誉学士 · Bachelor of Mathematics, Honours", major: "数学 / 风险管理方向", facts: ["Top 20%", "Distinction"], courses: "统计、精算、运筹、计算机、应用数学与纯数学等课程背景。", honours: ["President’s Scholarship", "连续四年 Distinction"] },
+  education: { number: "01 / 教育背景", title: "教育背景", year: "2022—2027", school: "University of Waterloo", degree: "数学荣誉学士 · Bachelor of Mathematics, Honours", major: "主修：金融分析与风险管理（FARM）· 专攻：专业风险管理（PRM）", facts: ["Top 20%", "Distinction"], courses: "统计、精算、运筹、计算机、应用数学与纯数学等课程背景。", honours: ["President’s Scholarship", "连续四年 Distinction"] },
   experience: { number: "02 / 实习经历", title: "实习经历", mediaLabel: "未来可加入项目图片或工作记录", items: [
     { company: "上海大寰机器人科技有限公司", role: "AI 训练与数据助理实习生", department: "具身智能研发部", date: "2026.03 — 2026.04", tag: "AI / ROBOTICS", mediaLabel: "ROBOTICS", details: ["使用 Codex、Python、OpenCV 与 YOLO 实例分割处理上千张多角度工件图像，实现自动分割、轮廓提取与标准化。", "构建粗筛—精匹配视觉定位流程，并完成 SO-ARM101 六轴机械臂搭建、标定和 LeRobot 演示数据采集。"] },
     { company: "安永华明会计师事务所", role: "审计实习生 · 港股 IPO 项目", department: "", date: "2025.07 — 2025.08", tag: "AUDIT / IPO", mediaLabel: "IPO", details: ["使用 Excel 批量清洗和核验销售流水、合同、发票与凭证。", "参与港股 IPO 收入循环 Walk-through Test，核验合同至回款流程。"] },
