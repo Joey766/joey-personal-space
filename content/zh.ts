@@ -8,6 +8,19 @@ export const zh = {
   career: { number: "05", title: "职业档案", lead: "从金融，到数据，再到 AI 与产品。", link: "进入职业档案" }, contact: { number: "06", title: "联系", copy: "如果你想聊项目、AI、产品或金融，欢迎联系我。", links: ["Email", "GitHub", "LinkedIn"] }, projectBack: "返回构建", projectHome: "个人空间"
 };
 
+Object.assign(zh, {
+  nav: [{ label: "探索", href: "#about" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "生活", href: "#life" }],
+  welcome: { ...zh.welcome, projects: "进入项目" },
+  bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "职业", href: "#career" }, { number: "03", label: "项目", href: "#projects" }, { number: "04", label: "生活", href: "#life" }],
+  about: { ...zh.about, timeline: [
+    { year: "2023", copy: "进入 University of Waterloo 数学荣誉学士项目" },
+    { year: "2024", copy: "学习统计、风险管理与数据分析，探索数学方法解决实际问题。" },
+    { year: "2025", copy: "进入金融与投资领域实践，参与 IPO、债券和行业研究项目。" },
+    { year: "2026", copy: "从数据分析走向人工智能产品，构建 Zhiyue AI。" },
+  ] },
+  career: { number: "02", title: "职业经历", lead: "从金融实践，到数据能力，再到 AI 与产品构建。", link: "查看完整职业档案" },
+});
+
 export const careerZh = {
   language: "中文 / EN", back: "返回个人空间", backToTop: "回到顶部", indexLabel: "职业档案目录",
   hero: { eyebrow: "职业档案 / CAREER", school: "University of Waterloo", direction: "数学 · AI · 产品 · Quantitative Thinking", intro: "一份关于学习、工作、项目与构建经历的完整记录。" },

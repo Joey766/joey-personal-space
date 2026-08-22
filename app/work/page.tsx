@@ -1,4 +1,3 @@
-import { WorkProfile } from "../../components/WorkProfile";
-import { careerZh } from "../../content/zh";
+import { CareerJourney } from "../../components/PersonalChapters";
 
-export default function WorkPage() { return <WorkProfile content={careerZh} locale="zh" />; }
+export default function WorkPage() { return <CareerJourney />; }

@@ -8,7 +8,7 @@ export function PersonalSpace({ content, locale }: { content: any; locale: "zh" 
   const [activeScene, setActiveScene] = useState<"football" | "basketball" | "chess" | "piano" | null>(null);
   const [doorAwake, setDoorAwake] = useState(false);
   const sceneTimer = useRef<number | undefined>(undefined);
-  const pageFor = (href: string) => `${locale === "zh" ? "" : "/en"}${({ "#about": "/explore", "#projects": "/build", "#notes": "/think", "#life": "/life" } as Record<string, string>)[href] ?? href}`;
+  const pageFor = (href: string) => `${locale === "zh" ? "" : "/en"}${({ "#about": "/explore", "#career": "/work", "#projects": "/projects", "#life": "/life" } as Record<string, string>)[href] ?? href}`;
   const enter = () => { setMenu(false); window.location.assign(pageFor("#about")); };
   const otherLocale = locale === "zh" ? "/en" : "/";
   const triggerScene = (scene: "football" | "basketball" | "chess" | "piano") => {
