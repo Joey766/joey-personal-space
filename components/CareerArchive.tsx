@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { useCallback, useState } from "react";
+import { CareerIntro } from "./CareerIntro";
 import "./career.css";
 
 type CareerContent = {
@@ -34,8 +38,12 @@ const navigation = [
 ];
 
 export function CareerArchive({ content }: { content: CareerContent }) {
+  const [introComplete, setIntroComplete] = useState(false);
+  const completeIntro = useCallback(() => setIntroComplete(true), []);
+
   return (
-    <main className="career-neo">
+    <main className={`career-neo ${introComplete ? "career-neo--ready" : "career-neo--intro-active"}`}>
+      {!introComplete && <CareerIntro onComplete={completeIntro} />}
       <header className="career-neo__header">
         <Link href="/" className="career-neo__monogram" aria-label="返回个人空间">AJ</Link>
         <nav aria-label="主导航">
@@ -46,16 +54,6 @@ export function CareerArchive({ content }: { content: CareerContent }) {
           <span aria-label="语言：中文">中文 / EN</span>
         </div>
       </header>
-
-      <section className="career-neo__hero" aria-labelledby="career-title">
-        <p className="career-neo__eyebrow">职业档案</p>
-        <h1 id="career-title">{content.hero.title}</h1>
-        <div className="career-neo__hero-copy">
-          <strong>{content.hero.theme}</strong>
-          <p>{content.hero.intro}</p>
-        </div>
-        <a className="career-neo__scroll" href="#education">向下探索 <span>↓</span></a>
-      </section>
 
       <section className="career-neo__section career-neo__education" id="education" aria-labelledby="education-title">
         <div className="career-neo__section-heading"><span>01</span><h2 id="education-title">教育背景</h2></div>
