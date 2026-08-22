@@ -10,13 +10,12 @@ type CareerContent = {
   education: {
     school: string;
     degree: string;
-    degreeEnglish: string;
     major: string;
     specialization: string;
     years: string;
     facts: string[];
   };
-  experience: Array<{ company: string; role: string; period: string; bullets: string[] }>;
+  experience: Array<{ company: string; role: string; period: string; description: string; tags: string[] }>;
   projects: Array<{ title: string; subtitle?: string; description: string; tools: string }>;
   skills: Array<{ category: string; items: string[] }>;
   beyond: { chess: { title: string; credential: string; achievement: string }; activities: Array<{ title: string; detail: string }> };
@@ -32,8 +31,8 @@ const experienceLogos = [
 
 const navigation = [
   { label: "探索", href: "/explore" },
-  { label: "构建", href: "/work" },
-  { label: "思考", href: "/thinking" },
+  { label: "职业", href: "/work" },
+  { label: "项目", href: "/projects" },
   { label: "生活", href: "/life" },
 ];
 
@@ -62,7 +61,6 @@ export function CareerArchive({ content }: { content: CareerContent }) {
           <div className="career-neo__school-content">
             <p className="career-neo__school-name">{content.education.school}</p>
             <h3>{content.education.degree}</h3>
-            <p className="career-neo__degree-english">{content.education.degreeEnglish}</p>
             <p>{content.education.major}</p>
             <p>{content.education.specialization}</p>
           </div>
@@ -75,6 +73,7 @@ export function CareerArchive({ content }: { content: CareerContent }) {
 
       <section className="career-neo__section career-neo__experience" id="experience" aria-labelledby="experience-title">
         <div className="career-neo__section-heading"><span>02</span><h2 id="experience-title">实践经历</h2></div>
+        <p className="career-neo__experience-intro">从金融分析到人工智能，探索数据如何转化为真实产品。</p>
         <div className="career-neo__timeline">
           {content.experience.map((entry, index) => (
             <article className="career-neo__experience-item" key={entry.company}>
@@ -83,7 +82,8 @@ export function CareerArchive({ content }: { content: CareerContent }) {
               <div className="career-neo__experience-copy">
                 <p className="career-neo__company">{entry.company}</p>
                 <h3>{entry.role}</h3>
-                <ul>{entry.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
+                <p className="career-neo__experience-description">{entry.description}</p>
+                <div className="career-neo__experience-tags">{entry.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
               </div>
               <div className="career-neo__experience-logo">
                 <img src={experienceLogos[index]} alt={`${entry.company} 标识`} />
