@@ -1,1 +1,1 @@
-.personal-chapter{position:relative;isolation:isolate}.personal-chapter>*:not(.ambient-particles){position:relative;z-index:1}
+.personal-chapter{position:relative;isolation:isolate}.personal-chapter>*:not(.ambient-particles){position:relative;z-index:1}.personal-chapter__locale{justify-self:end;color:rgba(255,255,255,.78)!important;font-size:13px;letter-spacing:-.04em}.personal-chapter__locale:hover{color:#fff!important}@media(max-width:760px){.personal-chapter__locale{font-size:11px}}

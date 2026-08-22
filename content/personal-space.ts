@@ -8,7 +8,7 @@ export const personalSpaceZh = {
   ],
   career: {
     eyebrow: "职业经历",
-    title: "Career Journey",
+    title: "职业旅程",
     lead: "实习经历是我把分析、研究与技术能力带入真实问题的过程。",
     archiveLabel: "查看完整职业档案 →", archiveTitle: ["更完整地记录", "学习、实践与创造。"],
     entries: [
@@ -31,7 +31,7 @@ export const personalSpaceZh = {
     ],
   },
   life: {
-    eyebrow: "Memories",
+    eyebrow: "回忆",
     title: "生活",
     lead: "留给校园、运动、棋局、音乐、旅行和日常的空间。",
     categories: ["校园", "足球与运动", "国际象棋", "音乐", "旅行", "日常"],

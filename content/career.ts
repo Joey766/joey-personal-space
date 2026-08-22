@@ -2,7 +2,7 @@ export const careerZh = {
   ui: {
     navigation: [{ label: "主页", href: "/" }, { label: "职业", href: "/work" }, { label: "项目", href: "/projects" }, { label: "探索", href: "/explore" }, { label: "生活", href: "/life" }],
     back: "返回个人空间", language: "中文 / EN", experienceIntro: "从金融分析到人工智能，探索数据如何转化为真实产品。",
-    labels: { education: "教育背景", educationSub: "Academic Journey", experience: "职业时间线", experienceSub: "Career Timeline", projects: "项目与构建", stack: "互动工具包", stackSub: "Interactive Toolkit", beyond: "校园与生活" },
+    labels: { education: "教育背景", educationSub: "学术旅程", experience: "职业时间线", experienceSub: "职业旅程", projects: "项目与构建", stack: "互动工具包", stackSub: "技术能力", beyond: "校园与生活" },
   },
   hero: {
     title: "职业档案",

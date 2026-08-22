@@ -1,0 +1,1 @@
+.locale-control{position:fixed;z-index:10;top:27px;right:5vw;color:#d7d8d6!important;font-family:var(--font-manrope),Arial,sans-serif;font-size:14px;letter-spacing:-.04em;text-decoration:none;transition:color .2s,opacity .2s}.locale-control:hover{color:#fff!important}@media(max-width:760px){.locale-control{top:22px;right:24px;font-size:12px}}

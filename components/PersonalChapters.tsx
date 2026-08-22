@@ -8,7 +8,7 @@ import "./personal-ambient.css";
 function ChapterHeader({ content, locale, path }: { content: any; locale: "zh" | "en"; path: string }) {
   const navigation = [{ label: content.ui.home, href: locale === "zh" ? "/" : "/en" }, ...content.navigation];
   const otherLocale = locale === "zh" ? `/en${path === "/" ? "" : path}` : path.replace(/^\/en/, "") || "/";
-  return <header className="personal-chapter__header"><Link href={locale === "zh" ? "/" : "/en"} className="personal-chapter__mark" aria-label={content.ui.home}>AJ</Link><nav>{navigation.map((item: any) => <Link href={item.href} key={item.href}>{item.label}</Link>)}</nav><Link href={otherLocale}>{content.ui.language}</Link></header>;
+  return <header className="personal-chapter__header"><Link href={locale === "zh" ? "/" : "/en"} className="personal-chapter__mark" aria-label={content.ui.home}>AJ</Link><nav>{navigation.map((item: any) => <Link href={item.href} key={item.href}>{item.label}</Link>)}</nav><Link className="personal-chapter__locale" href={otherLocale}>{content.ui.language}</Link></header>;
 }
 
 function ChapterFooter() {
