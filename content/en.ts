@@ -1,27 +1,17 @@
-import { zh } from "./zh";
-
 export const en = {
   language: "中文 / EN",
-  nav: [{ label: "Explore", href: "#about" }, { label: "Build", href: "#projects" }, { label: "Think", href: "#notes" }, { label: "Life", href: "#life" }],
-  welcome: { eyebrow: "JOEY LUO · PERSONAL SPACE", title: ["Welcome to", "My Personal Space"], line: "Explore · Build · Think · Life", enter: "Enter", projects: "Explore builds" },
-  bottom: [{ number: "01", label: "EXPLORE", href: "#about" }, { number: "02", label: "BUILD", href: "#projects" }, { number: "03", label: "THINK", href: "#notes" }, { number: "04", label: "LIFE", href: "#life" }],
-  about: { number: "01", title: "Explore", lead: "Hello, I’m Joey Luo.", copy: ["I am a University of Waterloo Mathematics student, majoring in Financial Analysis and Risk Management (FARM) with a specialization in Professional Risk Management (PRM).", "I explore AI, data, and product development—using mathematics to deconstruct problems and turn ideas into reality."], facts: ["University of Waterloo\nBachelor of Mathematics, Honours", "FARM · PRM\nAI · Data · Product Development"] },
-  projects: { number: "02", title: "Projects & Experiments", lead: "A quick overview of things I have built.", items: [{ title: "Zhiyue AI", copy: "AI job-search assistant / AI career intelligence platform", tags: "AI Product / LLM / Qwen3 / Ollama / Streamlit" }, { title: "AI Robot Visual Localization System", copy: "Embodied AI robotics project", tags: "Python / OpenCV / YOLO / LeRobot" }, { title: "Joey Luo Personal Space", copy: "AI-native personal website", tags: "Vibe Coding / Product Design / Next.js / React / Three.js" }, { title: "Credit Rating Transition Model", copy: "Quantitative risk modelling project", tags: "Python / Markov Chain / Credit Risk" }] },
+  nav: [{ label: "Home", href: "#top" }, { label: "Career", href: "#career" }, { label: "Projects", href: "#projects" }, { label: "Explore", href: "#about" }, { label: "Life", href: "#life" }],
+  welcome: { eyebrow: "JOEY LUO · PERSONAL SPACE", title: ["Welcome to", "My Personal Space"], line: "Explore · Career · Projects · Life", enter: "Enter", projects: "Explore Projects" },
+  bottom: [{ number: "01", label: "EXPLORE", href: "#about" }, { number: "02", label: "CAREER", href: "#career" }, { number: "03", label: "PROJECTS", href: "#projects" }, { number: "04", label: "LIFE", href: "#life" }],
+  about: { number: "01", title: "Explore", lead: "Hello, I’m Joey Luo.", copy: ["I am a University of Waterloo Mathematics student, majoring in Financial Analysis and Risk Management (FARM) with a specialization in Professional Risk Management (PRM).", "I explore AI, data, and product development—using mathematics to deconstruct problems and turn ideas into reality."], facts: ["University of Waterloo\nBachelor of Mathematics, Honours", "FARM · PRM\nAI · Data · Product Development"], cards: [{ title: "Mathematical Foundation", copy: "Mathematical training helps me understand complex problems through models, logic, and structured analysis.", tags: ["Financial Analysis and Risk Management", "Risk Modeling", "Quantitative Thinking"] }, { title: "Artificial Intelligence", copy: "I explore how AI changes software development and opens new forms of interaction between people and technology.", tags: ["LLM", "Computer Vision", "AI-native Development"] }, { title: "Product Building", copy: "I start with real needs and turn technical ability into products that people can use.", tags: ["Product Design", "Rapid Prototyping", "User Experience"] }], timeline: [{ year: "2023", copy: "Joined the University of Waterloo Bachelor of Mathematics program." }, { year: "2024", copy: "Built foundations in statistics, risk management, and data analysis." }, { year: "2025", copy: "Entered finance and investment practice through IPO, fixed-income, and industry research projects." }, { year: "2026", copy: "Moved from data analysis toward AI products and built Zhiyue AI." }] },
+  projects: { number: "02", title: "Projects & Experiments", lead: "A quick overview of things I have built.", items: [{ slug: "zhiyue-ai", title: "Zhiyue AI", subtitle: "AI Career Assistant", copy: "An AI-powered career assistant for resume parsing, job matching, and skill-gap analysis.", tags: "Ollama / Qwen3 / Streamlit" }, { slug: "personal-space", title: "Joey Luo Personal Space", subtitle: "AI Personal Website", copy: "An AI-native personal website built with Codex and a Vibe Coding workflow.", tags: "Next.js / React / Three.js / Vibe Coding" }, { slug: "credit-transition", title: "Bond Ratings in the Auto Industry", subtitle: "Markov Chain Credit Rating Model", copy: "A credit-rating transition model for analyzing automotive bond risk.", tags: "Python / Markov Chain / Credit Risk Modeling" }] },
   notes: { number: "03", title: "Think", lead: "Ideas about methodology and collaboration.", copy: ["Data-driven thinking: grounding judgment in evidence.", "AI-native workflows, product thinking, and human–AI collaboration."] },
   life: { number: "04", title: "Life", lead: "A few things beyond technology that keep me curious and grounded.", chess: { title: "Chess", meta: "FIDE Candidate Master (CM)", copy: "Chess taught me to enjoy the tension between long thought and short decisions." }, interests: ["Football", "Basketball", "Piano"], gallery: ["Chess photo", "Football photo", "Personal photo", "Travel photo"] },
   career: { number: "05", title: "Career", lead: "From finance, to data, to AI and product.", link: "View full career profile" },
   contact: { number: "06", title: "Contact", copy: "If you would like to talk about projects, AI, product, or finance, I would love to hear from you.", links: ["Email", "GitHub", "LinkedIn"] }
 };
 
-// The English experience keeps the same information architecture while its editorial translation is refined.
-Object.assign(en, {
-  about: { ...en.about, cards: zh.about.cards, timeline: zh.about.timeline },
-  projects: { ...zh.projects },
-  notes: { ...zh.notes },
-  life: { ...zh.life },
-  projectBack: "Back to builds",
-  projectHome: "Personal space",
-});
+Object.assign(en, { projectBack: "Back to projects", projectHome: "Personal Space" });
 
 export const careerEn = {
   language: "中文 / EN", back: "Back to personal space", backToTop: "Back to top", indexLabel: "Career archive index",

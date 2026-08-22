@@ -1,4 +1,4 @@
-import { WorkProfile } from "../../../components/WorkProfile";
-import { careerEn } from "../../../content/en";
+import { CareerJourney } from "../../../components/PersonalChapters";
+import { personalSpaceEn } from "../../../content/personal-space";
 
-export default function EnglishWorkPage() { return <WorkProfile content={careerEn} locale="en" />; }
+export default function EnglishWorkPage() { return <CareerJourney content={personalSpaceEn} locale="en" />; }

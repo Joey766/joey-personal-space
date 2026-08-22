@@ -1,13 +1,10 @@
-"use client";
-
 import Link from "next/link";
-import { useCallback, useState } from "react";
-import { CareerIntro } from "./CareerIntro";
 import { AmbientParticles } from "./AmbientParticles";
 import { ScrollReveal } from "./ScrollReveal";
 import "./career.css";
 
 type CareerContent = {
+  ui: { navigation: Array<{ label: string; href: string }>; back: string; language: string; experienceIntro: string; labels: { education: string; educationSub: string; experience: string; experienceSub: string; projects: string; stack: string; stackSub: string; beyond: string } };
   hero: { title: string; theme: string; intro: string };
   education: {
     school: string;
@@ -28,42 +25,32 @@ type CareerContent = {
 const experienceLogos = [
   { brand: "DAHUAN", subline: "ROBOTICS", className: "career-neo__experience-logo--dahuan" },
   { brand: "EY", subline: "ASSURANCE · IPO", className: "career-neo__experience-logo--ey" },
-  { brand: "国泰海通", subline: "GUOTAI HAITONG SECURITIES", className: "career-neo__experience-logo--guotai" },
+  { brand: "GUOTAI HAITONG", subline: "SECURITIES", className: "career-neo__experience-logo--guotai" },
   { brand: "HAIKUN", subline: "INVESTMENT MANAGEMENT", className: "career-neo__experience-logo--haikun" },
   { brand: "TIANLONG", subline: "SECURITIES", className: "career-neo__experience-logo--tianlong" },
 ];
 
-const navigation = [
-  { label: "主页", href: "/" },
-  { label: "职业", href: "/work" },
-  { label: "项目", href: "/projects" },
-  { label: "探索", href: "/explore" },
-  { label: "生活", href: "/life" },
-];
-
-export function CareerArchive({ content }: { content: CareerContent }) {
-  const [introComplete, setIntroComplete] = useState(false);
-  const completeIntro = useCallback(() => setIntroComplete(true), []);
-
+export function CareerArchive({ content, locale = "zh" }: { content: CareerContent; locale?: "zh" | "en" }) {
+  const home = locale === "zh" ? "/" : "/en";
+  const otherLocale = locale === "zh" ? "/en/career" : "/career";
   return (
-    <main className={`career-neo ${introComplete ? "career-neo--ready" : "career-neo--intro-active"}`}>
+    <main className="career-neo">
       <AmbientParticles variant="career" />
-      {!introComplete && <CareerIntro onComplete={completeIntro} />}
       <header className="career-neo__header">
-        <Link href="/" className="career-neo__monogram" aria-label="返回个人空间">AJ</Link>
-        <nav aria-label="主导航">
-          {navigation.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+        <Link href={home} className="career-neo__monogram" aria-label={content.ui.back}>AJ</Link>
+        <nav aria-label={`${content.hero.title} navigation`}>
+          {content.ui.navigation.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </nav>
         <div className="career-neo__header-actions">
-          <Link href="/">返回个人空间</Link>
-          <span aria-label="语言：中文">中文 / EN</span>
+          <Link href={home}>{content.ui.back}</Link>
+          <Link href={otherLocale} aria-label={content.ui.language}>{content.ui.language}</Link>
         </div>
       </header>
 
       <section className="career-neo__section career-neo__education" id="education" aria-labelledby="education-title">
-        <ScrollReveal><div className="career-neo__section-heading"><span>01</span><h2 id="education-title">学术旅程 <em>Academic Journey</em></h2></div></ScrollReveal>
+        <ScrollReveal><div className="career-neo__section-heading"><span>01</span><h2 id="education-title">{content.ui.labels.education} <em>{content.ui.labels.educationSub}</em></h2></div></ScrollReveal>
         <ScrollReveal delay={100}><article className="career-neo__school-card">
-          <div className="career-neo__school-logo" aria-label="University of Waterloo 标识"><img src="https://www.google.com/s2/favicons?domain=uwaterloo.ca&sz=128" alt="University of Waterloo" /></div>
+          <div className="career-neo__school-logo" aria-label="University of Waterloo logo"><img src="https://www.google.com/s2/favicons?domain=uwaterloo.ca&sz=128" alt="University of Waterloo" /></div>
           <div className="career-neo__school-content">
             <p className="career-neo__school-name">{content.education.school}</p>
             <h3>{content.education.degree}</h3>
@@ -75,11 +62,11 @@ export function CareerArchive({ content }: { content: CareerContent }) {
             <div>{content.education.facts.map((fact) => <span key={fact}>{fact}</span>)}</div>
           </div>
         </article></ScrollReveal>
-        <ScrollReveal delay={180}><div className="career-neo__academic-route" aria-label="2023 至 2027 学术时间线">{content.education.journey.map((year, index) => <span key={year} className={index === 0 || index === content.education.journey.length - 1 ? "is-major" : ""}>{year}</span>)}</div><div className="career-neo__academic-themes">{content.education.themes.map((theme) => <span key={theme}>{theme}</span>)}</div></ScrollReveal>
+        <ScrollReveal delay={180}><div className="career-neo__academic-route" aria-label={`${content.education.years} timeline`}>{content.education.journey.map((year, index) => <span key={year} className={index === 0 || index === content.education.journey.length - 1 ? "is-major" : ""}>{year}</span>)}</div><div className="career-neo__academic-themes">{content.education.themes.map((theme) => <span key={theme}>{theme}</span>)}</div></ScrollReveal>
       </section>
 
       <section className="career-neo__section career-neo__experience" id="experience" aria-labelledby="experience-title">
-        <ScrollReveal><div className="career-neo__section-heading"><span>02</span><h2 id="experience-title">职业时间线 <em>Career Timeline</em></h2></div><p className="career-neo__experience-intro">从金融分析到人工智能，探索数据如何转化为真实产品。</p></ScrollReveal>
+        <ScrollReveal><div className="career-neo__section-heading"><span>02</span><h2 id="experience-title">{content.ui.labels.experience} <em>{content.ui.labels.experienceSub}</em></h2></div><p className="career-neo__experience-intro">{content.ui.experienceIntro}</p></ScrollReveal>
         <div className="career-neo__timeline">
           {content.experience.map((entry, index) => (
             <ScrollReveal key={entry.company} delay={index * 70}><article className="career-neo__experience-item">
@@ -101,7 +88,7 @@ export function CareerArchive({ content }: { content: CareerContent }) {
       </section>
 
       <section className="career-neo__section career-neo__projects" id="projects" aria-labelledby="projects-title">
-        <ScrollReveal><div className="career-neo__section-heading"><span>03</span><h2 id="projects-title">项目与构建</h2></div></ScrollReveal>
+        <ScrollReveal><div className="career-neo__section-heading"><span>03</span><h2 id="projects-title">{content.ui.labels.projects}</h2></div></ScrollReveal>
         <div className="career-neo__project-grid">
           {content.projects.map((project, index) => (
             <ScrollReveal key={project.title} delay={index * 90}><article>
@@ -117,7 +104,7 @@ export function CareerArchive({ content }: { content: CareerContent }) {
       </section>
 
       <section className="career-neo__section career-neo__stack" id="stack" aria-labelledby="stack-title">
-        <ScrollReveal><div className="career-neo__section-heading"><span>04</span><h2 id="stack-title">互动工具包 <em>Interactive Toolkit</em></h2></div></ScrollReveal>
+        <ScrollReveal><div className="career-neo__section-heading"><span>04</span><h2 id="stack-title">{content.ui.labels.stack} <em>{content.ui.labels.stackSub}</em></h2></div></ScrollReveal>
         <div className="career-neo__stack-grid">
           {content.skills.map((group) => (
             <ScrollReveal key={group.category}><article>
@@ -129,7 +116,7 @@ export function CareerArchive({ content }: { content: CareerContent }) {
       </section>
 
       <section className="career-neo__section career-neo__beyond" id="beyond" aria-labelledby="beyond-title">
-        <ScrollReveal><div className="career-neo__section-heading"><span>05</span><h2 id="beyond-title">校园与生活</h2></div></ScrollReveal>
+        <ScrollReveal><div className="career-neo__section-heading"><span>05</span><h2 id="beyond-title">{content.ui.labels.beyond}</h2></div></ScrollReveal>
         <div className="career-neo__beyond-grid">
           <ScrollReveal><article className="career-neo__chess">
             <span className="career-neo__chess-mark">♞</span>
@@ -147,7 +134,7 @@ export function CareerArchive({ content }: { content: CareerContent }) {
         </div>
       </section>
 
-      <footer className="career-neo__footer"><Link href="/">JOEY LUO PERSONAL SPACE</Link><span>2026</span></footer>
+      <footer className="career-neo__footer"><Link href={home}>JOEY LUO PERSONAL SPACE</Link><span>2026</span></footer>
     </main>
   );
 }

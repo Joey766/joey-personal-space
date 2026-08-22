@@ -1,4 +1,9 @@
 export const careerZh = {
+  ui: {
+    navigation: [{ label: "主页", href: "/" }, { label: "职业", href: "/work" }, { label: "项目", href: "/projects" }, { label: "探索", href: "/explore" }, { label: "生活", href: "/life" }],
+    back: "返回个人空间", language: "中文 / EN", experienceIntro: "从金融分析到人工智能，探索数据如何转化为真实产品。",
+    labels: { education: "教育背景", educationSub: "Academic Journey", experience: "职业时间线", experienceSub: "Career Timeline", projects: "项目与构建", stack: "互动工具包", stackSub: "Interactive Toolkit", beyond: "校园与生活" },
+  },
   hero: {
     title: "职业档案",
     theme: "数学 × 人工智能 × 产品构建",
@@ -38,5 +43,31 @@ export const careerZh = {
   },
 } as const;
 
-// Reserved for a future localized version; components share the same data shape.
-export const careerEn = careerZh;
+export const careerEn = {
+  ui: {
+    navigation: [{ label: "Home", href: "/en" }, { label: "Career", href: "/en/work" }, { label: "Projects", href: "/en/projects" }, { label: "Explore", href: "/en/explore" }, { label: "Life", href: "/en/life" }],
+    back: "Back to Personal Space", language: "中文 / EN", experienceIntro: "From financial analysis to artificial intelligence, exploring how data becomes real products.",
+    labels: { education: "Education", educationSub: "Academic Journey", experience: "Experience", experienceSub: "Career Timeline", projects: "Projects", stack: "Technical Stack", stackSub: "Interactive Toolkit", beyond: "Beyond" },
+  },
+  hero: { title: "Career Journey", theme: "Mathematics × Artificial Intelligence × Product Building", intro: "A record of learning, practice, and creation." },
+  education: { school: "University of Waterloo", degree: "Bachelor of Mathematics, Honours", major: "Major: Financial Analysis and Risk Management (FARM)", specialization: "Specialization: Professional Risk Management (PRM)", years: "2023 — 2027", facts: ["Academic Standing: Distinction", "GRE: 329", "Q170 / V159"], journey: ["2023", "2024", "2025", "2026", "2027"], themes: ["Mathematics", "Data", "Risk Management"] },
+  experience: [
+    { company: "Shanghai Dahuan Robotics Technology Co., Ltd.", role: "AI Training & Data Assistant Intern", period: "2026.03 — 2026.04", details: ["Developed computer vision data pipelines using Python, OpenCV, and YOLO instance segmentation for robotic perception tasks.", "Built coarse-to-fine visual localization workflows by matching object templates and mapping reference coordinates to real-world positions.", "Built and calibrated SO-ARM101 robotic systems and collected expert demonstrations using LeRobot for imitation learning."], tags: ["AI", "Computer Vision", "Python", "OpenCV", "YOLO", "Robotics"] },
+    { company: "Ernst & Young (EY)", role: "Audit Intern — Hong Kong IPO Project", period: "2025.07 — 2025.08", details: ["Supported IPO audit procedures through financial document verification, contract review, invoice checking, and data analysis.", "Used Excel-based workflows to improve financial data validation and audit testing efficiency."], tags: ["Audit", "IPO", "Excel", "Financial Analysis"] },
+    { company: "Guotai Haitong Securities Co., Ltd.", role: "Fixed Income Intern — Debt Capital Markets", period: "2025.05 — 2025.06", details: ["Analyzed bond issuance and market data using Wind, FICC tools, and Excel.", "Built Python workflows for data cleaning and daily fixed-income market analysis."], tags: ["Fixed Income", "Debt Capital Markets", "Wind", "FICC", "Python"] },
+    { company: "Haikun Investment Management Co., Ltd.", role: "Research Intern", period: "2025.02 — 2025.09", details: ["Conducted industry research on AI and online education sectors.", "Built Python-based analysis workflows using financial data to support investment research."], tags: ["Investment Research", "AI Industry", "Python", "Data Analysis"] },
+    { company: "Hong Kong Tianlong Securities Co., Ltd.", role: "Assistant to Fund Manager", period: "2024.10 — 2025.01", details: ["Participated in the 0-to-1 product design of the \"Hong Kong Asset Management Connect\" App.", "Developed business plans and performed financial analysis using R and Excel."], tags: ["Investment Research", "Product", "R", "Excel"] },
+  ],
+  projects: [
+    { title: "Zhiyue AI", subtitle: "AI Career Assistant", description: "Built an AI-powered career assistant integrating resume parsing, career preference understanding, job matching, and skill-gap analysis.", tools: "Ollama · Qwen3 · Streamlit", path: ["Parse Resume", "Match Roles", "Identify Gaps"] },
+    { title: "Joey Luo Personal Space", subtitle: "AI Personal Website", description: "Built an AI-native personal website using Codex and a Vibe Coding workflow, integrating personal profile, projects, career experience, and an interactive digital space.", tools: "Next.js · React · Three.js · Vibe Coding", path: ["Shape Identity", "Build Space", "Iterate Experience"] },
+    { title: "Bond Ratings in the Auto Industry", subtitle: "Markov Chain Credit Rating Model", description: "Built a Markov Chain credit-rating transition model for analyzing automotive bond credit risk.", tools: "Python · Markov Chain · Credit Risk Modeling", path: ["Structure Data", "Model Transitions", "Assess Risk"] },
+  ],
+  skills: [
+    { category: "AI & Computer Vision", capability: "Build model workflows, visual recognition, and AI-assisted development systems.", items: ["LLM", "Qwen", "Ollama", "OpenCV", "YOLO", "Codex"] },
+    { category: "Programming & Data", capability: "Process, analyze, and automate data workflows.", items: ["Python", "R", "SQL", "SAS", "Pandas", "Excel VBA"] },
+    { category: "Quantitative Modeling", capability: "Use models to reason about risk, credit, and uncertainty.", items: ["Statistics", "Risk Management", "Credit Risk", "Markov Models"] },
+    { category: "Product Development", capability: "Turn problems into iterative product experiences.", items: ["Product Design", "User Flow", "AI-assisted Development", "Vibe Coding"] },
+  ],
+  beyond: { chess: { title: "Chess", credential: "FIDE Candidate Master (CM)", achievement: "Asian Age-Group Runner-up" }, activities: [{ title: "Football & Sports", detail: "Football · Basketball · Table Tennis" }, { title: "Music", detail: "Piano" }] },
+} as const;
