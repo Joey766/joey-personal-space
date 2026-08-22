@@ -1,3 +1,5 @@
+import { zh } from "./zh";
+
 export const en = {
   language: "中文 / EN",
   nav: [{ label: "Explore", href: "#about" }, { label: "Build", href: "#projects" }, { label: "Think", href: "#notes" }, { label: "Life", href: "#life" }],
@@ -10,6 +12,16 @@ export const en = {
   career: { number: "05", title: "Career", lead: "From finance, to data, to AI and product.", link: "View full career profile" },
   contact: { number: "06", title: "Contact", copy: "If you would like to talk about projects, AI, product, or finance, I would love to hear from you.", links: ["Email", "GitHub", "LinkedIn"] }
 };
+
+// The English experience keeps the same information architecture while its editorial translation is refined.
+Object.assign(en, {
+  about: { ...en.about, cards: zh.about.cards, timeline: zh.about.timeline },
+  projects: { ...zh.projects },
+  notes: { ...zh.notes },
+  life: { ...zh.life },
+  projectBack: "Back to builds",
+  projectHome: "Personal space",
+});
 
 export const careerEn = {
   language: "中文 / EN", back: "Back to personal space", backToTop: "Back to top", indexLabel: "Career archive index",
