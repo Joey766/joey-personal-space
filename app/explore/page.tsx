@@ -1,1 +1,4 @@
-import { BrandPage } from "../../components/BrandPage"; import { zh } from "../../content/zh"; export default function Page() { return <BrandPage content={zh} locale="zh" page="explore" />; }
+import { AmbientBrandPage } from "../../components/AmbientBrandPage";
+import { zh } from "../../content/zh";
+
+export default function Page() { return <AmbientBrandPage content={zh} locale="zh" page="explore" />; }

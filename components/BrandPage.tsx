@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const routeMap: Record<string, string> = { "#about": "/explore", "#career": "/work", "#projects": "/projects", "#life": "/life" };
+const routeMap: Record<string, string> = { "#top": "/", "#about": "/explore", "#career": "/work", "#projects": "/projects", "#life": "/life" };
 
 export function BrandPage({ content, locale, page }: { content: any; locale: "zh" | "en"; page: "explore" | "build" | "think" | "life" }) {
   const base = locale === "zh" ? "" : "/en";

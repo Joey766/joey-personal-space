@@ -9,7 +9,7 @@ export const zh = {
 };
 
 Object.assign(zh, {
-  nav: [{ label: "探索", href: "#about" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "生活", href: "#life" }],
+  nav: [{ label: "主页", href: "#top" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "探索", href: "#about" }, { label: "生活", href: "#life" }],
   welcome: { ...zh.welcome, projects: "进入项目" },
   bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "职业", href: "#career" }, { number: "03", label: "项目", href: "#projects" }, { number: "04", label: "生活", href: "#life" }],
   about: { ...zh.about, timeline: [
