@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { AmbientParticles } from "./AmbientParticles";
+import { AmbientBackground } from "./AmbientBackground";
 import { ScrollReveal } from "./ScrollReveal";
 import "./explore-atlas.css";
 
@@ -22,7 +22,7 @@ export function ExploreAtlas({ content, locale }: { content: any; locale: "zh" |
   const about = content.about;
 
   return <main className="explore-atlas">
-    <AmbientParticles variant="explore" />
+    <AmbientBackground variant="explore" />
     <header className="explore-atlas__header">
       <Link className="explore-atlas__monogram" href={base || "/"} aria-label="AJ">AJ</Link>
       <nav>{content.nav.map((item: any) => <Link href={linkFor(item.href)} key={item.label}>{item.label}</Link>)}</nav>

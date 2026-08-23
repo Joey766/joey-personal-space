@@ -2,7 +2,7 @@ import Link from "next/link";
 import { personalSpaceZh } from "../content/personal-space";
 import "./personal-chapters.css";
 import { ScrollReveal } from "./ScrollReveal";
-import { AmbientParticles } from "./AmbientParticles";
+import { AmbientBackground as AmbientParticles } from "./AmbientBackground";
 import "./personal-ambient.css";
 import "./company-logo-images.css";
 

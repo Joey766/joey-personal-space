@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AmbientParticles } from "./AmbientParticles";
+import { AmbientBackground } from "./AmbientBackground";
 import { ScrollReveal } from "./ScrollReveal";
 import "./career.css";
 import "./company-logo-images.css";
@@ -36,7 +36,7 @@ export function CareerArchive({ content, locale = "zh" }: { content: CareerConte
   const otherLocale = locale === "zh" ? "/en/career" : "/career";
   return (
     <main className="career-neo">
-      <AmbientParticles variant="career" />
+      <AmbientBackground variant="career" />
       <header className="career-neo__header">
         <Link href={home} className="career-neo__monogram" aria-label={content.ui.back}>AJ</Link>
         <nav aria-label={`${content.hero.title} navigation`}>
