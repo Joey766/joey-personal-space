@@ -1,6 +1,6 @@
-.personal-space .welcome-copy h1.welcome-title--balanced { max-width: 9.8em; }
-.personal-space .welcome-copy h1.welcome-title--balanced span { display:block; font-size:clamp(38px,3.75vw,58px) !important; line-height:1.13 !important; letter-spacing:-.06em; }
+.personal-space .welcome-copy h1.welcome-title--balanced { max-width: 9.3em; }
+.personal-space .welcome-copy h1.welcome-title--balanced span { display:block; font-size:clamp(36px,3.35vw,52px) !important; line-height:1.15 !important; letter-spacing:-.055em; }
 .personal-space .welcome-line span { display:block; }
 .personal-space .welcome-line span:first-child { color:rgba(225,226,230,.78); }
 .personal-space .welcome-line span + span { margin-top:6px; color:rgba(194,197,207,.56); font-size:.82em; }
-@media(max-width:760px){.personal-space .welcome-copy h1.welcome-title--balanced{max-width:8.6em}.personal-space .welcome-copy h1.welcome-title--balanced span{font-size:clamp(30px,7.3vw,42px) !important;line-height:1.15 !important}.personal-space .welcome-line span + span{margin-top:5px;font-size:.82em}}
+@media(max-width:760px){.personal-space .welcome-copy h1.welcome-title--balanced{max-width:8.6em}.personal-space .welcome-copy h1.welcome-title--balanced span{font-size:clamp(29px,7vw,40px) !important;line-height:1.17 !important}.personal-space .welcome-line span + span{margin-top:5px;font-size:.82em}}
