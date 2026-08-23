@@ -2,6 +2,7 @@ import Link from "next/link";
 import { AmbientParticles } from "./AmbientParticles";
 import { ScrollReveal } from "./ScrollReveal";
 import "./career.css";
+import "./company-logo-images.css";
 
 type CareerContent = {
   ui: { navigation: Array<{ label: string; href: string }>; back: string; language: string; experienceIntro: string; labels: { education: string; educationSub: string; experience: string; experienceSub: string; projects: string; stack: string; stackSub: string; beyond: string } };

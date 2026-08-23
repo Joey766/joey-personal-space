@@ -4,6 +4,7 @@ import "./personal-chapters.css";
 import { ScrollReveal } from "./ScrollReveal";
 import { AmbientParticles } from "./AmbientParticles";
 import "./personal-ambient.css";
+import "./company-logo-images.css";
 
 function ChapterHeader({ content, locale, path }: { content: any; locale: "zh" | "en"; path: string }) {
   const navigation = [{ label: content.ui.home, href: locale === "zh" ? "/" : "/en" }, ...content.navigation];
