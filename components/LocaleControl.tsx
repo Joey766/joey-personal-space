@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SafeLink as Link } from "./SafeLink";
 import "./locale-control.css";
 
 export function LocaleControl({ locale, path }: { locale: "zh" | "en"; path: string }) {

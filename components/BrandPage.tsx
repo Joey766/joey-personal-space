@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SafeLink as Link } from "./SafeLink";
 
 const routeMap: Record<string, string> = { "#top": "/", "#about": "/explore", "#career": "/work", "#projects": "/projects", "#life": "/life" };
 

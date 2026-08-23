@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SafeLink as Link } from "./SafeLink";
 import { personalSpaceZh } from "../content/personal-space";
 import "./personal-chapters.css";
 import { ScrollReveal } from "./ScrollReveal";

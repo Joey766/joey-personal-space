@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SafeLink as Link } from "./SafeLink";
 import { AmbientBackground } from "./AmbientBackground";
 import { ScrollReveal } from "./ScrollReveal";
 import "./career.css";

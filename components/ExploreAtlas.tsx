@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { SafeLink as Link } from "./SafeLink";
 import { useState } from "react";
 import { AmbientBackground } from "./AmbientBackground";
 import { ScrollReveal } from "./ScrollReveal";

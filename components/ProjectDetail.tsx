@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SafeLink as Link } from "./SafeLink";
 
 export function ProjectDetail({ content, locale, slug }: { content: any; locale: "zh" | "en"; slug: string }) {
   const project = content.projects.items.find((item: any) => item.slug === slug);

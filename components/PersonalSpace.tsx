@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, type MouseEvent } from "react";
-import Link from "next/link";
+import { SafeLink as Link } from "./SafeLink";
 import { INTRO_VIDEO_SRC } from "../content/site";
 import "./personal-space-interactions.css";
 
