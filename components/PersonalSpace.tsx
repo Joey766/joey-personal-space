@@ -9,7 +9,7 @@ export function PersonalSpace({ content, locale }: { content: any; locale: "zh" 
   const [doorAwake, setDoorAwake] = useState(false);
   const sceneTimer = useRef<number | undefined>(undefined);
   const pageFor = (href: string) => `${locale === "zh" ? "" : "/en"}${({ "#about": "/explore", "#career": "/work", "#projects": "/projects", "#life": "/life" } as Record<string, string>)[href] ?? href}`;
-  const enter = () => { setMenu(false); window.location.assign(pageFor("#about")); };
+  const goToCareer = () => { setMenu(false); window.location.assign(pageFor("#career")); };
   const otherLocale = locale === "zh" ? "/en" : "/";
   const triggerScene = (scene: "football" | "basketball" | "chess" | "piano") => {
     if (activeScene) return;
@@ -27,7 +27,7 @@ export function PersonalSpace({ content, locale }: { content: any; locale: "zh" 
     <section className={doorAwake ? "welcome door-awake" : "welcome"} id="top" onMouseMove={checkDoor} onMouseLeave={() => setDoorAwake(false)}>
       <video className="welcome-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true"><source src={INTRO_VIDEO_SRC} type="video/mp4" /></video><div className="video-fade" aria-hidden="true" />
       <header className="header"><a className="jl" href="#top" aria-label="AJ">AJ</a><nav className="desktop-nav">{content.nav.map((item: any) => <a key={item.label} href={pageFor(item.href)}>{item.label}</a>)}</nav><a className="locale" href={otherLocale}>{content.language}</a><button className="burger" onClick={() => setMenu(true)} aria-label="Menu"><i /><i /></button></header>
-      <div className="welcome-copy"><p className="eyebrow">{content.welcome.eyebrow}</p><h1>{content.welcome.title.map((line: string) => <span key={line}>{line}</span>)}</h1><p className="welcome-line">{content.welcome.line}</p><div className="welcome-actions"><button className="light-pill" onClick={enter}>{content.welcome.enter} <span>→</span></button><a href={pageFor("#projects")}>{content.welcome.projects} <span>→</span></a></div></div>
+      <div className="welcome-copy"><p className="eyebrow">{content.welcome.eyebrow}</p><h1>{content.welcome.title.map((line: string) => <span key={line}>{line}</span>)}</h1><p className="welcome-line">{content.welcome.line}</p>{content.welcome.focus && <p className="welcome-line welcome-focus">{content.welcome.focus}</p>}<div className="welcome-actions"><button className="light-pill" onClick={goToCareer}>{content.welcome.enter} <span>→</span></button><a href={pageFor("#projects")}>{content.welcome.projects} <span>→</span></a></div></div>
       <div className="interest-scenes" aria-hidden="true">
         <div className={`interest-zone football-zone ${activeScene === "football" ? "is-active" : ""}`} onMouseEnter={() => triggerScene("football")}>
           <span className="football-pitch" /><span className="football-player"><i /><i /></span><span className="football-goal"><i /><i /><i /></span><span className="football-ball" />

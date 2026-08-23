@@ -10,13 +10,17 @@ export const zh = {
 
 Object.assign(zh, {
   nav: [{ label: "主页", href: "#top" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "探索", href: "#about" }, { label: "生活", href: "#life" }],
-  welcome: { ...zh.welcome, projects: "进入项目" },
+  welcome: { ...zh.welcome, title: ["罗敖杰"], line: "University of Waterloo Mathematics Student", focus: "AI Product · Quantitative Thinking · Risk Modeling", enter: "职业", projects: "项目" },
   bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "职业", href: "#career" }, { number: "03", label: "项目", href: "#projects" }, { number: "04", label: "生活", href: "#life" }],
-  about: { ...zh.about, timeline: [
-    { year: "2023", copy: "进入 University of Waterloo 数学荣誉学士项目" },
-    { year: "2024", copy: "学习统计、风险管理与数据分析，探索数学方法解决实际问题。" },
-    { year: "2025", copy: "进入金融与投资领域实践，参与 IPO、债券和行业研究项目。" },
-    { year: "2026", copy: "从数据分析走向人工智能产品，构建 Zhiyue AI。" },
+  about: { ...zh.about, lead: "探索我的数学背景、人工智能方向与产品实践。", cards: [
+    { title: "Quantitative Thinking", copy: "数学训练帮助我建立模型、分析复杂问题。", detail: "把金融分析、统计推理与风险建模连接到真实决策。", tags: ["Financial Analysis and Risk Management", "Statistics", "Risk Modeling", "Markov Models"] },
+    { title: "Artificial Intelligence", copy: "探索人工智能技术，并通过 AI-native workflow 构建实际产品。", detail: "从语言模型到计算机视觉，关注能从洞察走向使用的智能系统。", tags: ["LLM", "Computer Vision", "Ollama", "Qwen", "Python"] },
+    { title: "Product Creation", copy: "从真实需求出发，将技术能力转化为用户可以使用的产品。", detail: "以快速迭代连接产品设计、用户体验与工程实现。", tags: ["Product Design", "User Experience", "Rapid Prototyping", "Vibe Coding"] },
+  ], timelineTitle: "Career Timeline", timelineLead: "从数学学习、金融实践到 AI 产品构建的成长路径。", timeline: [
+    { year: "2023", copy: "进入 University of Waterloo 数学系" },
+    { year: "2024", copy: "学习统计、风险管理与数据分析" },
+    { year: "2025", copy: "进入金融与商业实践：", items: ["香港天龙证券", "国泰海通证券", "安永华明"] },
+    { year: "2026", copy: "探索 AI 产品开发：", items: ["上海大寰机器人", "Zhiyue AI"] },
   ] },
   career: { number: "02", title: "职业经历", lead: "从金融实践，到数据能力，再到 AI 与产品构建。", link: "查看完整职业档案" },
 });
