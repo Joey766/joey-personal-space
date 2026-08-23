@@ -1,0 +1,61 @@
+/* Shared visual hierarchy for content pages. The homepage keeps its cinematic scale. */
+.explore-atlas__hero h1,
+.career-neo__hero h1,
+.personal-chapter__intro h1,
+.project-hero h1 {
+  font-size: clamp(44px, 4vw, 56px) !important;
+  line-height: 0.98 !important;
+}
+
+.explore-atlas__section-title h2,
+.career-neo__section-heading h2 {
+  font-size: clamp(60px, 5vw, 72px) !important;
+  line-height: 0.95 !important;
+}
+
+.explore-atlas__capabilities h3,
+.career-neo__school-content h3,
+.career-neo__projects h3,
+.career-journey__company,
+.projects-showcase h2,
+.memories-grid__tile h2 {
+  font-size: clamp(24px, 2.2vw, 32px) !important;
+  line-height: 1.12 !important;
+}
+
+.explore-atlas__hero h2,
+.explore-atlas__capability p,
+.explore-atlas__timeline-list p,
+.career-neo__school-content p,
+.career-neo__experience-details,
+.career-neo__projects article > p,
+.projects-showcase p,
+.personal-chapter__intro p,
+.career-journey__summary,
+.memories-grid__tile p,
+.project-copy {
+  font-size: clamp(16px, 1.1vw, 18px) !important;
+  line-height: 1.72 !important;
+}
+
+/* Keep the atmosphere soft and page-specific without introducing a new visual layer. */
+.ambient-background--explore .ambient-background__aurora {
+  background: radial-gradient(ellipse at 82% 10%, rgba(103, 70, 151, .17), transparent 33%), radial-gradient(ellipse at 14% 64%, rgba(53, 104, 171, .10), transparent 28%), radial-gradient(ellipse at 62% 84%, rgba(82, 59, 127, .11), transparent 35%);
+}
+
+@media (max-width: 760px) {
+  .explore-atlas__hero h1,
+  .career-neo__hero h1,
+  .personal-chapter__intro h1,
+  .project-hero h1 { font-size: clamp(38px, 11vw, 50px) !important; }
+
+  .explore-atlas__section-title h2,
+  .career-neo__section-heading h2 { font-size: clamp(42px, 11vw, 58px) !important; }
+
+  .explore-atlas__capabilities h3,
+  .career-neo__school-content h3,
+  .career-neo__projects h3,
+  .career-journey__company,
+  .projects-showcase h2,
+  .memories-grid__tile h2 { font-size: clamp(24px, 7vw, 30px) !important; }
+}
