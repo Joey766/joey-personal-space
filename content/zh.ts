@@ -10,7 +10,7 @@ export const zh = {
 
 Object.assign(zh, {
   nav: [{ label: "主页", href: "#top" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "探索", href: "#about" }, { label: "生活", href: "#life" }],
-  welcome: { ...zh.welcome, title: ["AI 产品 · 量化思维 · 风险建模"], line: "就读于 University of Waterloo 数学系", enter: "职业" },
+  welcome: { ...zh.welcome, title: ["AI 产品 · 量化思维 · 风险建模"], line: "就读于 University of Waterloo 数学系", enter: "继续探索" },
   bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "职业", href: "#career" }, { number: "03", label: "项目", href: "#projects" }, { number: "04", label: "生活", href: "#life" }],
   about: { ...zh.about, lead: "探索我的数学背景、人工智能方向与产品实践。", cards: [
     { title: "量化思维", copy: "数学训练帮助我建立模型、分析复杂问题。", detail: "把金融分析、统计推理与风险建模连接到真实决策。", tags: ["Financial Analysis and Risk Management (FARM)", "统计学", "风险建模", "马尔可夫模型"] },
