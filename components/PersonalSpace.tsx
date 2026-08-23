@@ -1,7 +1,9 @@
 "use client";
 
 import { useRef, useState, type MouseEvent } from "react";
+import Link from "next/link";
 import { INTRO_VIDEO_SRC } from "../content/site";
+import "./personal-space-interactions.css";
 
 export function PersonalSpace({ content, locale }: { content: any; locale: "zh" | "en" }) {
   const [menu, setMenu] = useState(false);
@@ -9,7 +11,6 @@ export function PersonalSpace({ content, locale }: { content: any; locale: "zh" 
   const [doorAwake, setDoorAwake] = useState(false);
   const sceneTimer = useRef<number | undefined>(undefined);
   const pageFor = (href: string) => `${locale === "zh" ? "" : "/en"}${({ "#about": "/explore", "#career": "/work", "#projects": "/projects", "#life": "/life" } as Record<string, string>)[href] ?? href}`;
-  const goToCareer = () => { setMenu(false); window.location.assign(pageFor("#career")); };
   const otherLocale = locale === "zh" ? "/en" : "/";
   const triggerScene = (scene: "football" | "basketball" | "chess" | "piano") => {
     if (activeScene) return;
@@ -26,8 +27,8 @@ export function PersonalSpace({ content, locale }: { content: any; locale: "zh" 
   return <main className="personal-space landing-page">
     <section className={doorAwake ? "welcome door-awake" : "welcome"} id="top" onMouseMove={checkDoor} onMouseLeave={() => setDoorAwake(false)}>
       <video className="welcome-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true"><source src={INTRO_VIDEO_SRC} type="video/mp4" /></video><div className="video-fade" aria-hidden="true" />
-      <header className="header"><a className="jl" href="#top" aria-label="AJ">AJ</a><nav className="desktop-nav">{content.nav.map((item: any) => <a key={item.label} href={pageFor(item.href)}>{item.label}</a>)}</nav><a className="locale" href={otherLocale}>{content.language}</a><button className="burger" onClick={() => setMenu(true)} aria-label="Menu"><i /><i /></button></header>
-      <div className="welcome-copy"><p className="eyebrow">{content.welcome.eyebrow}</p><h1>{content.welcome.title.map((line: string) => <span key={line}>{line}</span>)}</h1><p className="welcome-line">{content.welcome.line}</p>{content.welcome.focus && <p className="welcome-line welcome-focus">{content.welcome.focus}</p>}<div className="welcome-actions"><button className="light-pill" onClick={goToCareer}>{content.welcome.enter} <span>→</span></button><a href={pageFor("#projects")}>{content.welcome.projects} <span>→</span></a></div></div>
+      <header className="header"><Link className="jl" href={locale === "zh" ? "/" : "/en"} aria-label="AJ">AJ</Link><nav className="desktop-nav">{content.nav.map((item: any) => <Link key={item.label} href={pageFor(item.href)}>{item.label}</Link>)}</nav><Link className="locale" href={otherLocale}>{content.language}</Link><button className="burger" onClick={() => setMenu(true)} aria-label="Menu"><i /><i /></button></header>
+      <div className="welcome-copy"><p className="eyebrow">{content.welcome.eyebrow}</p><h1>{content.welcome.title.map((line: string) => <span key={line}>{line}</span>)}</h1><p className="welcome-line">{content.welcome.line}</p>{content.welcome.focus && <p className="welcome-line welcome-focus">{content.welcome.focus}</p>}<div className="welcome-actions"><Link className="light-pill" href={pageFor("#career")}>{content.welcome.enter} <span>→</span></Link><Link href={pageFor("#projects")}>{content.welcome.projects} <span>→</span></Link></div></div>
       <div className="interest-scenes" aria-hidden="true">
         <div className={`interest-zone football-zone ${activeScene === "football" ? "is-active" : ""}`} onMouseEnter={() => triggerScene("football")}>
           <span className="football-pitch" /><span className="football-player"><i /><i /></span><span className="football-goal"><i /><i /><i /></span><span className="football-ball" />
@@ -42,8 +43,8 @@ export function PersonalSpace({ content, locale }: { content: any; locale: "zh" 
           <span className="piano-lid" /><span className="piano-case" /><span className="piano-keys"><i /><i /><i /><i /><i /><i /><i /><i /></span><span className="piano-note note-one">♪</span><span className="piano-note note-two">♫</span>
         </div>
       </div>
-      <nav className="meaning-nav">{content.bottom.map((item: any) => <a href={pageFor(item.href)} key={item.number}><b>{item.number}</b><span>{item.label}</span></a>)}</nav>
+      <nav className="meaning-nav">{content.bottom.map((item: any) => <Link href={pageFor(item.href)} key={item.number}><b>{item.number}</b><span>{item.label}</span></Link>)}</nav>
     </section>
-    {menu && <div className="mobile-menu" role="dialog" aria-modal="true"><button onClick={() => setMenu(false)} aria-label="Close">×</button><nav>{content.nav.map((item: any) => <a href={pageFor(item.href)} key={item.label} onClick={() => setMenu(false)}>{item.label}</a>)}<i /><a href={otherLocale}>{content.language}</a></nav></div>}
+    {menu && <div className="mobile-menu" role="dialog" aria-modal="true"><button onClick={() => setMenu(false)} aria-label="Close">×</button><nav>{content.nav.map((item: any) => <Link href={pageFor(item.href)} key={item.label} onClick={() => setMenu(false)}>{item.label}</Link>)}<i /><Link href={otherLocale}>{content.language}</Link></nav></div>}
   </main>;
 }
