@@ -30,7 +30,7 @@ export function ExploreAtlas({ content, locale }: { content: any; locale: "zh" |
     </header>
 
     <section className="explore-atlas__hero">
-      <ScrollReveal><p>01 / EXPLORE</p><h1>{about.title}</h1><h2>{about.lead}</h2></ScrollReveal>
+      <ScrollReveal><p>{locale === "zh" ? "01 / 探索" : "01 / EXPLORE"}</p><h1>{about.title}</h1><h2>{about.lead}</h2></ScrollReveal>
     </section>
 
     <section className="explore-atlas__capabilities" aria-label={about.title}>

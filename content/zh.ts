@@ -10,17 +10,23 @@ export const zh = {
 
 Object.assign(zh, {
   nav: [{ label: "主页", href: "#top" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "探索", href: "#about" }, { label: "生活", href: "#life" }],
-  welcome: { ...zh.welcome, title: ["罗敖杰"], line: "University of Waterloo Mathematics Student", focus: "AI Product · Quantitative Thinking · Risk Modeling", enter: "职业", projects: "项目" },
+  welcome: { ...zh.welcome, title: ["罗敖杰"], line: "就读于 University of Waterloo 数学系", focus: "AI 产品 · 量化思维 · 风险建模", enter: "职业", projects: "项目" },
   bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "职业", href: "#career" }, { number: "03", label: "项目", href: "#projects" }, { number: "04", label: "生活", href: "#life" }],
   about: { ...zh.about, lead: "探索我的数学背景、人工智能方向与产品实践。", cards: [
-    { title: "Quantitative Thinking", copy: "数学训练帮助我建立模型、分析复杂问题。", detail: "把金融分析、统计推理与风险建模连接到真实决策。", tags: ["Financial Analysis and Risk Management", "Statistics", "Risk Modeling", "Markov Models"] },
-    { title: "Artificial Intelligence", copy: "探索人工智能技术，并通过 AI-native workflow 构建实际产品。", detail: "从语言模型到计算机视觉，关注能从洞察走向使用的智能系统。", tags: ["LLM", "Computer Vision", "Ollama", "Qwen", "Python"] },
-    { title: "Product Creation", copy: "从真实需求出发，将技术能力转化为用户可以使用的产品。", detail: "以快速迭代连接产品设计、用户体验与工程实现。", tags: ["Product Design", "User Experience", "Rapid Prototyping", "Vibe Coding"] },
-  ], timelineTitle: "Career Timeline", timelineLead: "从数学学习、金融实践到 AI 产品构建的成长路径。", timeline: [
+    { title: "量化思维", copy: "数学训练帮助我建立模型、分析复杂问题。", detail: "把金融分析、统计推理与风险建模连接到真实决策。", tags: ["Financial Analysis and Risk Management (FARM)", "统计学", "风险建模", "马尔可夫模型"] },
+    { title: "人工智能", copy: "探索人工智能技术，并通过 AI 原生工作流构建实际产品。", detail: "从语言模型到计算机视觉，关注能从洞察走向使用的智能系统。", tags: ["LLM", "计算机视觉", "Ollama", "Qwen", "Python"] },
+    { title: "产品创造", copy: "从真实需求出发，将技术能力转化为用户可以使用的产品。", detail: "以快速迭代连接产品设计、用户体验与工程实现。", tags: ["产品设计", "用户体验", "快速原型", "氛围编程"] },
+  ], timelineTitle: "职业时间线", timelineLead: "从数学学习、金融实践到 AI 产品构建的成长路径。", timeline: [
     { year: "2023", copy: "进入 University of Waterloo 数学系" },
     { year: "2024", copy: "学习统计、风险管理与数据分析" },
     { year: "2025", copy: "进入金融与商业实践：", items: ["香港天龙证券", "国泰海通证券", "安永华明"] },
     { year: "2026", copy: "探索 AI 产品开发：", items: ["上海大寰机器人", "Zhiyue AI"] },
+  ] },
+  projects: { ...zh.projects, items: [
+    { slug: "zhiyue-ai", title: "Zhiyue AI", subtitle: "AI 求职助手 / AI 职业智能平台", copy: "一个帮助用户理解个人背景、发现匹配机会，并获得职业发展建议的 AI 产品。", tags: "AI / LLM / Qwen3 / Ollama / Streamlit", workflow: ["上传简历", "AI 理解个人背景", "岗位匹配", "技能差距分析", "求职优化建议"], groups: [{ title: "产品", items: ["简历分析", "岗位匹配", "技能差距分析"] }, { title: "AI", items: ["Qwen3", "Ollama", "LLM 工作流"] }, { title: "工程实现", items: ["Python", "Streamlit", "GitHub 部署"] }] },
+    { slug: "robotics-vision", title: "AI 机器人视觉定位系统", subtitle: "具身智能机器人", copy: "探索计算机视觉与机器人系统结合的 AI 应用。", tags: "Python / OpenCV / YOLO / LeRobot / SO-ARM101", groups: [{ title: "技术关键词", items: ["Python", "OpenCV", "YOLO", "LeRobot", "SO-ARM101"] }] },
+    { slug: "personal-space", title: "罗敖杰个人空间", subtitle: "AI 原生个人网站", copy: "一个通过 AI 原生工作流与氛围编程从 0 到 1 构建的个人数字空间。", tags: "氛围编程 / 产品设计 / Next.js / React / Three.js", groups: [{ title: "构建方式", items: ["Codex 辅助开发", "Next.js", "React", "Three.js", "GSAP", "Framer Motion"] }] },
+    { slug: "credit-transition", title: "信用评级迁移模型", subtitle: "量化风险建模", copy: "使用马尔可夫链模型研究汽车行业信用评级变化和长期风险。", tags: "Python / 马尔可夫链 / 风险建模", groups: [{ title: "技术关键词", items: ["Python", "马尔可夫链", "风险建模"] }] },
   ] },
   career: { number: "02", title: "职业经历", lead: "从金融实践，到数据能力，再到 AI 与产品构建。", link: "查看完整职业档案" },
 });

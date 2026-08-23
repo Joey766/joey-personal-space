@@ -25,9 +25,9 @@ export const personalSpaceZh = {
     lead: "围绕 AI 产品、机器人视觉与量化建模的持续实践。",
     items: [
       { number: "01", title: "Zhiyue AI", subtitle: "AI求职助手", description: "构建 AI 驱动的职业规划平台，实现简历解析、岗位匹配、技能差距分析。", stack: ["Ollama", "Qwen3", "Streamlit"] },
-      { number: "02", title: "Joey Luo Personal Space", description: "使用 AI 辅助开发个人网站，构建中英文 Personal / Career 架构。", stack: ["Next.js", "React", "Three.js", "Vibe Coding"] },
+      { number: "02", title: "罗敖杰个人空间", description: "使用 AI 辅助开发个人网站，构建中英文个人空间与职业档案架构。", stack: ["Next.js", "React", "Three.js", "氛围编程"] },
       { number: "03", title: "AI机器人视觉定位系统", description: "探索机器人目标识别、定位与操作流程的计算机视觉工作流。", stack: ["Python", "OpenCV", "YOLO", "LeRobot"] },
-      { number: "04", title: "汽车行业债券评级迁移模型", description: "基于 Markov Chain 分析汽车行业债券信用风险变化。", stack: ["Python", "Markov Chain", "Risk Modeling"] },
+      { number: "04", title: "汽车行业债券评级迁移模型", description: "基于马尔可夫链分析汽车行业债券信用风险变化。", stack: ["Python", "马尔可夫链", "风险建模"] },
     ],
   },
   life: {
