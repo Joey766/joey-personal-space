@@ -22,7 +22,7 @@ export const personalSpaceZh = {
   projects: {
     eyebrow: "项目",
     title: "项目与构建",
-    lead: "围绕 AI 产品、机器人视觉与量化建模的持续实践。",
+    lead: "人工智能正在改变创造的方式。借助新的工具与技术，我开始探索如何从一个想法出发，快速构建属于自己的产品。对我而言，项目不仅是最终成果，更是不断尝试、学习和突破边界的过程。",
     items: [
       { number: "01", title: "Zhiyue AI", subtitle: "AI求职助手", description: "构建 AI 驱动的职业规划平台，实现简历解析、岗位匹配、技能差距分析。", stack: ["Ollama", "Qwen3", "Streamlit"] },
       { number: "02", title: "罗敖杰个人空间", description: "使用 AI 辅助开发个人网站，构建中英文个人空间与职业档案架构。", stack: ["Next.js", "React", "Three.js", "氛围编程"] },

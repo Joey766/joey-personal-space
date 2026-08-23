@@ -1,7 +1,7 @@
 export const careerZh = {
   ui: {
     navigation: [{ label: "主页", href: "/" }, { label: "职业", href: "/work" }, { label: "项目", href: "/projects" }, { label: "探索", href: "/explore" }, { label: "生活", href: "/life" }],
-    back: "返回个人空间", language: "中文 / EN", experienceIntro: "从金融分析到人工智能，探索数据如何转化为真实产品。",
+    back: "返回个人空间", language: "中文 / EN", experienceIntro: "每一段经历，都是一次新的探索。我不希望将自己局限于单一领域，而是在不同方向中寻找可能性。在探索的过程中，我不断发现自己的不足，也逐渐明确真正感兴趣的问题——如何利用数学、数据和技术解决现实世界的问题。",
     labels: { education: "教育背景", educationSub: "学术旅程", experience: "职业时间线", experienceSub: "职业旅程", projects: "项目与构建", stack: "互动工具包", stackSub: "技术能力", beyond: "校园与生活" },
   },
   hero: {

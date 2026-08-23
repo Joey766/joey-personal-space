@@ -12,7 +12,7 @@ Object.assign(zh, {
   nav: [{ label: "主页", href: "#top" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "探索", href: "#about" }, { label: "生活", href: "#life" }],
   welcome: { ...zh.welcome, title: ["AI 产品 · 量化思维 · 风险建模"], line: "就读于 University of Waterloo 数学系", enter: "继续探索" },
   bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "职业", href: "#career" }, { number: "03", label: "项目", href: "#projects" }, { number: "04", label: "生活", href: "#life" }],
-  about: { ...zh.about, lead: "探索我的数学背景、人工智能方向与产品实践。", cards: [
+  about: { ...zh.about, lead: "从数学学习中的好奇与挑战开始，我逐渐发现数据、分析与逻辑推理的兴趣，并探索如何将数学思维延伸到人工智能与真实问题的解决中。", cards: [
     { title: "量化思维", copy: "数学训练帮助我建立模型、分析复杂问题。", detail: "把金融分析、统计推理与风险建模连接到真实决策。", tags: ["Financial Analysis and Risk Management (FARM)", "统计学", "风险建模", "马尔可夫模型"] },
     { title: "人工智能", copy: "探索人工智能技术，并通过 AI 原生工作流构建实际产品。", detail: "从语言模型到计算机视觉，关注能从洞察走向使用的智能系统。", tags: ["LLM", "计算机视觉", "Ollama", "Qwen", "Python"] },
     { title: "产品创造", copy: "从真实需求出发，将技术能力转化为用户可以使用的产品。", detail: "以快速迭代连接产品设计、用户体验与工程实现。", tags: ["产品设计", "用户体验", "快速原型", "氛围编程"] },
