@@ -5,6 +5,7 @@ import { ScrollReveal } from "./ScrollReveal";
 import { AmbientBackground as AmbientParticles } from "./AmbientBackground";
 import "./personal-ambient.css";
 import "./company-logo-images.css";
+import "./life-archive.css";
 
 function ChapterHeader({ content, locale, path }: { content: any; locale: "zh" | "en"; path: string }) {
   const navigation = [{ label: content.ui.home, href: locale === "zh" ? "/" : "/en" }, ...content.navigation];
@@ -29,5 +30,6 @@ export function ProjectsShowcase({ content = personalSpaceZh, locale = "zh" }: {
 
 export function LifeMemories({ content = personalSpaceZh, locale = "zh" }: { content?: any; locale?: "zh" | "en" }) {
   const { life } = content;
-  return <main className="personal-chapter personal-chapter--life"><AmbientParticles variant="life" /><ChapterHeader content={content} locale={locale} path="/life" /><section className="personal-chapter__intro"><p>{life.eyebrow}</p><h1>{life.title}</h1><span>{life.lead}</span></section><section className="memories-grid" aria-label={life.title}>{life.categories.map((category: string, index: number) => <ScrollReveal className={`memories-grid__tile memories-grid__tile--${index + 1}`} delay={index * 65} key={category}><article><span>{String(index + 1).padStart(2, "0")}</span><h2>{category}</h2><p>{content.ui.photoSlot}</p></article></ScrollReveal>)}</section><ChapterFooter /></main>;
+  const base = locale === "zh" ? "/life" : "/en/life";
+  return <main className="personal-chapter personal-chapter--life"><AmbientParticles variant="life" /><ChapterHeader content={content} locale={locale} path="/life" /><section className="personal-chapter__intro life-archive__intro"><p>{life.eyebrow}</p><h1>{life.title}</h1><span>{life.lead}</span></section><section className="life-archive__cards" aria-label={life.title}>{life.archive.map((item: any, index: number) => <ScrollReveal className="life-archive__reveal" delay={index * 80} key={item.slug}><Link className={`life-archive__card life-archive__card--${item.slug}`} href={`${base}/${item.slug}`}><span>0{index + 1}</span><div className="life-archive__visual" aria-hidden="true" /><p>{item.label}</p><h2>{item.title}</h2><i>探索 <b>→</b></i></Link></ScrollReveal>)}</section><ChapterFooter /></main>;
 }

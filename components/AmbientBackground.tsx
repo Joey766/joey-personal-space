@@ -1,5 +1,6 @@
 import { AmbientParticles } from "./AmbientParticles";
 import "./ambient-background.css";
+import "./ambient-system.css";
 
 type AmbientVariant = "career" | "explore" | "work" | "projects" | "life";
 

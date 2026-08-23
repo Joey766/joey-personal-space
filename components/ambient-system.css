@@ -1,0 +1,89 @@
+/* Shared cinematic atmosphere for every non-home page. */
+.ambient-background {
+  background: linear-gradient(145deg, #040609 0%, #070a11 48%, #040507 100%) !important;
+}
+
+.ambient-background::before,
+.ambient-background::after {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  pointer-events: none;
+}
+
+.ambient-background::before {
+  z-index: 0;
+  opacity: .58;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,255,255,.018), transparent 55%), linear-gradient(118deg, transparent 18%, rgba(140,160,206,.025) 52%, transparent 82%);
+  filter: blur(28px);
+  animation: ambient-space-drift 34s ease-in-out infinite alternate;
+}
+
+.ambient-background::after {
+  z-index: 0;
+  opacity: .18;
+  background-image: radial-gradient(circle at 1px 1px, rgba(230,239,255,.16) 1px, transparent 1.2px);
+  background-size: 130px 130px;
+  mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 84%, transparent);
+}
+
+.ambient-background__aurora,
+.ambient-background__mist { z-index: 1; }
+.ambient-background .ambient-particles { z-index: 2 !important; }
+
+/* Page surfaces remain transparent enough for the shared atmosphere to read. */
+.explore-atlas { background: radial-gradient(ellipse at 84% 11%, rgba(83,68,151,.15), transparent 37%), radial-gradient(ellipse at 14% 76%, rgba(37,83,150,.12), transparent 35%), #040609 !important; }
+.career-neo { background: radial-gradient(ellipse at 82% 12%, rgba(37,73,151,.18), transparent 38%), radial-gradient(ellipse at 15% 73%, rgba(181,143,65,.09), transparent 34%), #04070e !important; }
+.personal-chapter--projects { background: radial-gradient(ellipse at 82% 12%, rgba(38,142,184,.17), transparent 38%), radial-gradient(ellipse at 13% 76%, rgba(31,87,151,.14), transparent 35%), #03080d !important; }
+.personal-chapter--life,
+.life-detail { background: radial-gradient(ellipse at 82% 13%, rgba(69,133,101,.16), transparent 39%), radial-gradient(ellipse at 13% 76%, rgba(174,112,62,.11), transparent 34%), #050807 !important; }
+
+.ambient-background--explore {
+  background: radial-gradient(ellipse at 82% 10%, rgba(91,70,163,.16), transparent 34%), radial-gradient(ellipse at 14% 76%, rgba(37,91,157,.13), transparent 33%), #040609 !important;
+}
+.ambient-background--explore .ambient-background__aurora { opacity: .88; }
+.ambient-background--explore::before { opacity: .82; background: radial-gradient(ellipse at 82% 13%, rgba(105,78,184,.22), transparent 37%), radial-gradient(ellipse at 17% 73%, rgba(46,111,183,.17), transparent 35%), linear-gradient(118deg, transparent 24%, rgba(126,114,209,.05) 56%, transparent 84%); }
+.ambient-background--explore .ambient-background__mist { background: radial-gradient(ellipse at 18% 22%, rgba(163,145,229,.075), transparent 28%), radial-gradient(ellipse at 82% 73%, rgba(83,145,216,.065), transparent 31%); }
+.ambient-background--explore .ambient-particles__stars i { background: #dde1ff; box-shadow: 0 0 8px rgba(182,190,255,.36); }
+
+.ambient-background--career {
+  background: radial-gradient(ellipse at 80% 12%, rgba(43,78,151,.16), transparent 35%), radial-gradient(ellipse at 16% 68%, rgba(172,138,65,.075), transparent 31%), #04070e !important;
+}
+.ambient-background--career .ambient-background__aurora { opacity: .82; }
+.ambient-background--career::before { opacity: .78; background: radial-gradient(ellipse at 82% 14%, rgba(51,90,178,.22), transparent 38%), radial-gradient(ellipse at 16% 72%, rgba(190,153,70,.13), transparent 34%), linear-gradient(118deg, transparent 22%, rgba(71,109,191,.045) 57%, transparent 84%); }
+.ambient-background--career .ambient-background__mist { background: radial-gradient(ellipse at 16% 17%, rgba(82,120,206,.065), transparent 27%), radial-gradient(ellipse at 84% 73%, rgba(211,174,86,.05), transparent 28%); }
+.ambient-background--career .ambient-particles__stars i { background: #f3e6be; box-shadow: 0 0 8px rgba(216,179,93,.32); }
+.ambient-background--career .ambient-particles__dust i { background: #d7b35d; }
+
+.ambient-background--projects {
+  background: radial-gradient(ellipse at 79% 9%, rgba(38,141,183,.17), transparent 34%), radial-gradient(ellipse at 12% 73%, rgba(30,85,145,.13), transparent 32%), #03080d !important;
+}
+.ambient-background--projects::after { opacity: .21; background-image: linear-gradient(rgba(91,182,210,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(91,182,210,.1) 1px, transparent 1px); background-size: 112px 112px; mask-image: radial-gradient(ellipse at 69% 38%, #000, transparent 67%); }
+.ambient-background--projects .ambient-background__aurora { opacity: .9; }
+.ambient-background--projects::before { opacity: .8; background: radial-gradient(ellipse at 80% 12%, rgba(45,157,199,.22), transparent 38%), radial-gradient(ellipse at 14% 76%, rgba(41,98,176,.16), transparent 34%), linear-gradient(118deg, transparent 23%, rgba(66,178,207,.05) 57%, transparent 84%); }
+.ambient-background--projects .ambient-background__mist { background: radial-gradient(ellipse at 13% 20%, rgba(80,193,220,.07), transparent 25%), radial-gradient(ellipse at 83% 75%, rgba(71,118,207,.07), transparent 30%); }
+.ambient-background--projects .ambient-particles__stars i { background: #c9f3ff; box-shadow: 0 0 9px rgba(105,214,243,.38); }
+.ambient-background--projects .ambient-particles__dust i { background: #87e4f1; opacity: .1; }
+
+.ambient-background--life {
+  background: radial-gradient(ellipse at 80% 13%, rgba(65,121,98,.15), transparent 35%), radial-gradient(ellipse at 15% 70%, rgba(166,111,61,.10), transparent 32%), #050807 !important;
+}
+.ambient-background--life .ambient-background__aurora { opacity: .86; }
+.ambient-background--life::before { opacity: .78; background: radial-gradient(ellipse at 80% 14%, rgba(77,143,111,.20), transparent 39%), radial-gradient(ellipse at 15% 74%, rgba(177,119,68,.13), transparent 34%), linear-gradient(118deg, transparent 23%, rgba(102,158,122,.045) 57%, transparent 84%); }
+.ambient-background--life .ambient-background__mist { background: radial-gradient(ellipse at 15% 18%, rgba(111,173,136,.065), transparent 28%), radial-gradient(ellipse at 85% 71%, rgba(215,154,89,.055), transparent 30%); }
+.ambient-background--life .ambient-particles__stars i { background: #efe4c9; box-shadow: 0 0 8px rgba(226,186,115,.3); }
+.ambient-background--life .ambient-particles__dust i { background: #b6d6ad; opacity: .08; }
+
+@keyframes ambient-space-drift {
+  from { transform: translate3d(-1.5%, -1%, 0) scale(1); }
+  to { transform: translate3d(2.5%, 2%, 0) scale(1.05); }
+}
+
+@media (max-width: 760px) {
+  .ambient-background::after { background-size: 110px 110px; opacity: .11; }
+  .ambient-background--projects::after { background-size: 86px 86px; opacity: .14; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-background::before { animation: none; }
+}

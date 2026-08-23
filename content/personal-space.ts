@@ -31,10 +31,16 @@ export const personalSpaceZh = {
     ],
   },
   life: {
-    eyebrow: "回忆",
+    eyebrow: "个人生活档案",
     title: "生活",
-    lead: "留给校园、运动、棋局、音乐、旅行和日常的空间。",
-    categories: ["校园", "足球与运动", "国际象棋", "音乐", "旅行", "日常"],
+    lead: "我始终认为，生活与学习、工作应该保持平衡。忙碌之外，生活给予我恢复能量的空间，也让我在不同的体验中发现新的乐趣。无论是棋盘上的思考、运动中的挑战，还是音乐中的表达，这些经历让我保持好奇，更加享受探索世界的过程。",
+    archive: [
+      { slug: "chess", title: "Chess", label: "国际象棋", intro: "一段关于思考、专注与长期训练的记录。" },
+      { slug: "football", title: "Football", label: "足球与运动", intro: "一段关于团队、挑战与持续投入的记录。" },
+      { slug: "music", title: "Music", label: "音乐", intro: "一段关于练习、表达与节奏的记录。" },
+    ],
+    galleryLabel: "照片墙",
+    galleryNote: "照片位置，等待未来的生活片段。",
   },
 } as const;
 
@@ -69,5 +75,16 @@ export const personalSpaceEn = {
       { number: "03", title: "Bond Ratings in the Auto Industry", subtitle: "Markov Chain Credit Rating Model", description: "Built a Markov Chain credit-rating transition model to analyze credit-risk changes in the automotive bond market.", stack: ["Python", "Markov Chain", "Credit Risk Modeling"] },
     ],
   },
-  life: { eyebrow: "Memories", title: "Life", lead: "A space for campus, sport, chess, music, travel, and everyday moments.", categories: ["Campus", "Football & Sports", "Chess", "Music", "Travel", "Everyday"] },
+  life: {
+    eyebrow: "Personal Life Archive",
+    title: "Life",
+    lead: "I believe life should stay in balance with study and work. Beyond busy days, it offers space to recharge and discover new interests. Whether through thought on the chessboard, challenge in sport, or expression in music, these experiences keep me curious and open to the world.",
+    archive: [
+      { slug: "chess", title: "Chess", label: "Chess", intro: "A record of thought, focus, and long-term training." },
+      { slug: "football", title: "Football", label: "Football & Sports", intro: "A record of teamwork, challenge, and steady commitment." },
+      { slug: "music", title: "Music", label: "Music", intro: "A record of practice, expression, and rhythm." },
+    ],
+    galleryLabel: "Gallery",
+    galleryNote: "Photo placeholders for future moments.",
+  },
 } as const;
