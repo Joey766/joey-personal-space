@@ -4,6 +4,7 @@ import { useRef, useState, type MouseEvent } from "react";
 import { SafeLink as Link } from "./SafeLink";
 import { INTRO_VIDEO_SRC } from "../content/site";
 import "./personal-space-interactions.css";
+import "./home-hero-copy.css";
 
 export function PersonalSpace({ content, locale }: { content: any; locale: "zh" | "en" }) {
   const [menu, setMenu] = useState(false);
@@ -28,7 +29,7 @@ export function PersonalSpace({ content, locale }: { content: any; locale: "zh" 
     <section className={doorAwake ? "welcome door-awake" : "welcome"} id="top" onMouseMove={checkDoor} onMouseLeave={() => setDoorAwake(false)}>
       <video className="welcome-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true"><source src={INTRO_VIDEO_SRC} type="video/mp4" /></video><div className="video-fade" aria-hidden="true" />
       <header className="header"><Link className="jl" href={locale === "zh" ? "/" : "/en"} aria-label="AJ">AJ</Link><nav className="desktop-nav">{content.nav.map((item: any) => <Link key={item.label} href={pageFor(item.href)}>{item.label}</Link>)}</nav><Link className="locale" href={otherLocale}>{content.language}</Link><button className="burger" onClick={() => setMenu(true)} aria-label="Menu"><i /><i /></button></header>
-      <div className="welcome-copy"><p className="eyebrow">{content.welcome.eyebrow}</p><h1>{content.welcome.title.map((line: string) => <span key={line}>{line}</span>)}</h1><p className="welcome-line">{content.welcome.line}</p><div className="welcome-actions"><Link className="light-pill" href={pageFor("#about")}>{content.welcome.enter} <span>→</span></Link></div></div>
+      <div className="welcome-copy"><p className="eyebrow">{content.welcome.eyebrow}</p><h1 className={content.welcome.title.length > 1 ? "welcome-title--balanced" : ""}>{content.welcome.title.map((line: string) => <span key={line}>{line}</span>)}</h1><p className="welcome-line">{Array.isArray(content.welcome.line) ? content.welcome.line.map((line: string) => <span key={line}>{line}</span>) : content.welcome.line}</p><div className="welcome-actions"><Link className="light-pill" href={pageFor("#about")}>{content.welcome.enter} <span>→</span></Link></div></div>
       <div className="interest-scenes" aria-hidden="true">
         <div className={`interest-zone football-zone ${activeScene === "football" ? "is-active" : ""}`} onMouseEnter={() => triggerScene("football")}>
           <span className="football-pitch" /><span className="football-player"><i /><i /></span><span className="football-goal"><i /><i /><i /></span><span className="football-ball" />

@@ -1,0 +1,5 @@
+.personal-space .welcome-copy h1.welcome-title--balanced { max-width: 11.5em; }
+.personal-space .welcome-copy h1.welcome-title--balanced span { display:block; font-size:clamp(40px,4.35vw,66px) !important; line-height:1.08 !important; letter-spacing:-.065em; }
+.personal-space .welcome-line span { display:block; }
+.personal-space .welcome-line span + span { margin-top:7px; color:rgba(226,228,233,.76); font-size:.88em; }
+@media(max-width:760px){.personal-space .welcome-copy h1.welcome-title--balanced{max-width:8.3em}.personal-space .welcome-copy h1.welcome-title--balanced span{font-size:clamp(32px,8.4vw,46px) !important;line-height:1.13 !important}.personal-space .welcome-line span + span{margin-top:5px;font-size:.84em}}
