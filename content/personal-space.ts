@@ -1,3 +1,5 @@
+import { musicVideosEn, musicVideosZh } from "./music-videos";
+
 export const personalSpaceZh = {
   ui: { home: "主页", language: "中文 / EN", photoSlot: "照片位置", flow: ["发现", "构建", "迭代"] },
   navigation: [
@@ -38,12 +40,20 @@ export const personalSpaceZh = {
       { slug: "campus", title: "校园", label: "校园生活", intro: "一段关于学习、社区与日常校园片段的记录。" },
       { slug: "football", title: "Football", label: "足球与运动", intro: "一段关于团队、挑战与持续投入的记录。" },
       { slug: "chess", title: "国际象棋", label: "棋类经历", intro: "一段关于思考、专注、策略与长期训练的记录。" },
-      { slug: "music", title: "音乐", label: "创造与表达", intro: "一段关于练习、表达与节奏的记录。" },
+      { slug: "music", title: "音乐", label: "创造与表达", intro: "音乐是我探索创造力与表达方式的一部分。在学习和工作之外，音乐让我保持平衡，也让我从不同角度感受世界。" },
       { slug: "travel", title: "旅行", label: "探索不同环境", intro: "一段关于走进不同环境、保持开放与发现新视角的记录。" },
       { slug: "everyday", title: "日常", label: "照片记录", intro: "一段关于平凡日子里值得留下的照片与记忆的记录。" },
     ],
     galleryLabel: "照片墙",
     galleryNote: "照片位置，等待未来的生活片段。",
+    musicArchive: {
+      label: "音乐影像",
+      note: "演唱会现场与音乐片段，将在这里持续收录。",
+      emptyLabel: "等待视频收录",
+      playLabel: "播放",
+      fullscreenLabel: "全屏播放",
+      videos: musicVideosZh,
+    },
   },
 } as const;
 
@@ -86,11 +96,19 @@ export const personalSpaceEn = {
       { slug: "campus", title: "Campus", label: "Campus Life", intro: "A record of learning, community, and everyday campus moments." },
       { slug: "football", title: "Football", label: "Football & Sports", intro: "A record of teamwork, challenge, and steady commitment." },
       { slug: "chess", title: "Chess", label: "Chess", intro: "A record of thought, focus, strategy, and long-term training." },
-      { slug: "music", title: "Music", label: "Music", intro: "A record of practice, expression, and rhythm." },
+      { slug: "music", title: "Music", label: "Creativity & Expression", intro: "Music is part of how I explore creativity and expression. Beyond study and work, it helps me stay balanced and experience the world from different perspectives." },
       { slug: "travel", title: "Travel", label: "Travel", intro: "A record of new environments, open-mindedness, and fresh perspectives." },
       { slug: "everyday", title: "Everyday", label: "Everyday Moments", intro: "A record of the photos and memories worth keeping from ordinary days." },
     ],
     galleryLabel: "Gallery",
     galleryNote: "Photo placeholders for future moments.",
+    musicArchive: {
+      label: "Music Archive",
+      note: "Concert footage and music moments will continue to be collected here.",
+      emptyLabel: "Awaiting video",
+      playLabel: "Play",
+      fullscreenLabel: "Fullscreen",
+      videos: musicVideosEn,
+    },
   },
 } as const;

@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { SafeLink as Link } from "./SafeLink";
 import { AmbientBackground } from "./AmbientBackground";
+import { MusicArchive } from "./MusicArchive";
 import { ScrollReveal } from "./ScrollReveal";
 import "./life-archive.css";
 
@@ -28,6 +29,7 @@ export function LifeArchive({ content, locale, slug }: { content: any; locale: "
   const backHref = locale === "zh" ? "/life" : "/en/life";
 
   if (!item) return null;
+  if (slug === "music") return <MusicArchive content={content} locale={locale} item={item} />;
   const move = (direction: number) => setActive((current) => (current + direction + slideNames.length) % slideNames.length);
   const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => { startX.current = event.clientX; };
   const onPointerUp = (event: React.PointerEvent<HTMLDivElement>) => {
