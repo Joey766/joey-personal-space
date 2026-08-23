@@ -34,7 +34,7 @@ export const careerZh = {
   skills: [
     { category: "AI 与计算机视觉", capability: "构建模型调用、视觉识别与 AI 工作流", items: ["LLM", "Qwen", "Ollama", "OpenCV", "YOLO", "Codex"] },
     { category: "编程与数据", capability: "完成数据处理、分析与自动化流程", items: ["Python", "R", "SQL", "SAS", "Pandas", "Excel VBA"] },
-    { category: "数量分析", capability: "用模型理解风险、信用与不确定性", items: ["统计学", "风险管理", "信用风险", "马尔可夫模型"] },
+    { category: "数据分析", capability: "用模型理解风险、信用与不确定性", items: ["统计学", "风险管理", "信用风险", "马尔可夫模型"] },
     { category: "产品开发", capability: "将问题转化为可迭代的产品体验", items: ["产品设计", "用户流程", "AI 辅助开发", "氛围编程"] },
   ],
   beyond: {
