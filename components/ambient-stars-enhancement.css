@@ -1,0 +1,13 @@
+/* Additional star field and a second, low-frequency meteor trail. */
+.ambient-particles,
+.ambient-particles * { pointer-events: none !important; }
+
+.ambient-particles__stars i:nth-child(13){left:4%;top:61%;width:1px;height:1px;opacity:.16;animation-delay:-6.8s}.ambient-particles__stars i:nth-child(14){left:17%;top:33%;width:2px;height:2px;opacity:.14;animation-delay:-2.4s}.ambient-particles__stars i:nth-child(15){left:31%;top:91%;width:1px;height:1px;opacity:.2;animation-delay:-8.3s}.ambient-particles__stars i:nth-child(16){left:42%;top:11%;width:1px;height:1px;opacity:.14;animation-delay:-4.2s}.ambient-particles__stars i:nth-child(17){left:57%;top:48%;width:2px;height:2px;opacity:.13;animation-delay:-7.2s}.ambient-particles__stars i:nth-child(18){left:68%;top:67%;width:1px;height:1px;opacity:.19;animation-delay:-1.4s}.ambient-particles__stars i:nth-child(19){left:79%;top:23%;width:2px;height:2px;opacity:.12;animation-delay:-5.6s}.ambient-particles__stars i:nth-child(20){left:94%;top:72%;width:1px;height:1px;opacity:.2;animation-delay:-3.4s}.ambient-particles__stars i:nth-child(21){left:25%;top:53%;width:1px;height:1px;opacity:.15;animation-delay:-9.1s}.ambient-particles__stars i:nth-child(22){left:54%;top:95%;width:2px;height:2px;opacity:.12;animation-delay:-6.1s}
+
+.ambient-particles__dust i:nth-child(7){left:7%;top:-8%;width:2px;height:2px;opacity:.06;animation-delay:-11s}.ambient-particles__dust i:nth-child(8){left:27%;top:-3%;width:2px;height:2px;opacity:.08;animation-delay:-17s}.ambient-particles__dust i:nth-child(9){left:66%;top:-9%;width:3px;height:3px;opacity:.06;animation-delay:-4s}.ambient-particles__dust i:nth-child(10){left:96%;top:-7%;width:2px;height:2px;opacity:.07;animation-delay:-14s}
+
+.ambient-particles__meteor--secondary{left:22%;top:34%;width:54px;opacity:0;transform:rotate(-32deg);animation:ambient-meteor-secondary 43s 17s ease-in-out infinite}
+@keyframes ambient-meteor-secondary{0%,93%,100%{opacity:0;transform:translate3d(0,0,0) rotate(-32deg)}95%{opacity:.2}98%{opacity:0;transform:translate3d(115px,78px,0) rotate(-32deg)}}
+
+@media(max-width:760px){.ambient-particles__stars i:nth-child(n+11),.ambient-particles__dust i:nth-child(n+5),.ambient-particles__meteor--secondary{display:none}}
+@media(prefers-reduced-motion:reduce){.ambient-particles__meteor--secondary{animation:none}}

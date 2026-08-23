@@ -6,6 +6,7 @@ import { AmbientBackground as AmbientParticles } from "./AmbientBackground";
 import "./personal-ambient.css";
 import "./company-logo-images.css";
 import "./life-archive.css";
+import "./life-archive-expansion.css";
 
 function ChapterHeader({ content, locale, path }: { content: any; locale: "zh" | "en"; path: string }) {
   const navigation = [{ label: content.ui.home, href: locale === "zh" ? "/" : "/en" }, ...content.navigation];
@@ -31,5 +32,6 @@ export function ProjectsShowcase({ content = personalSpaceZh, locale = "zh" }: {
 export function LifeMemories({ content = personalSpaceZh, locale = "zh" }: { content?: any; locale?: "zh" | "en" }) {
   const { life } = content;
   const base = locale === "zh" ? "/life" : "/en/life";
-  return <main className="personal-chapter personal-chapter--life"><AmbientParticles variant="life" /><ChapterHeader content={content} locale={locale} path="/life" /><section className="personal-chapter__intro life-archive__intro"><p>{life.eyebrow}</p><h1>{life.title}</h1><span>{life.lead}</span></section><section className="life-archive__cards" aria-label={life.title}>{life.archive.map((item: any, index: number) => <ScrollReveal className="life-archive__reveal" delay={index * 80} key={item.slug}><Link className={`life-archive__card life-archive__card--${item.slug}`} href={`${base}/${item.slug}`}><span>0{index + 1}</span><div className="life-archive__visual" aria-hidden="true" /><p>{item.label}</p><h2>{item.title}</h2><i>探索 <b>→</b></i></Link></ScrollReveal>)}</section><ChapterFooter /></main>;
+  const actionLabel = locale === "zh" ? "探索" : "Explore";
+  return <main className="personal-chapter personal-chapter--life"><AmbientParticles variant="life" /><ChapterHeader content={content} locale={locale} path="/life" /><section className="personal-chapter__intro life-archive__intro"><p>{life.eyebrow}</p><h1>{life.title}</h1><span>{life.lead}</span></section><section className="life-archive__cards" aria-label={life.title}>{life.archive.map((item: any, index: number) => <ScrollReveal className="life-archive__reveal" delay={index * 80} key={item.slug}><Link className={`life-archive__card life-archive__card--${item.slug}`} href={`${base}/${item.slug}`}><span>0{index + 1}</span><div className="life-archive__visual" aria-hidden="true" /><p>{item.label}</p><h2>{item.title}</h2><i>{actionLabel} <b>→</b></i></Link></ScrollReveal>)}</section><ChapterFooter /></main>;
 }

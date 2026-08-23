@@ -1,0 +1,11 @@
+.life-archive__card--travel .life-archive__visual {
+  background: radial-gradient(circle at 76% 22%, rgba(70,144,165,.22), transparent 27%), radial-gradient(circle at 18% 74%, rgba(164,121,69,.14), transparent 33%), linear-gradient(155deg, transparent 47%, rgba(150,195,190,.1) 48% 51%, transparent 52%);
+}
+
+.life-archive__card--campus .life-archive__visual {
+  background: radial-gradient(circle at 74% 23%, rgba(186,151,72,.18), transparent 25%), radial-gradient(circle at 22% 73%, rgba(103,114,179,.14), transparent 33%), repeating-linear-gradient(135deg, transparent 0 48px, rgba(255,255,255,.025) 48px 49px);
+}
+
+.life-archive__card--everyday .life-archive__visual {
+  background: radial-gradient(circle at 78% 24%, rgba(189,126,110,.18), transparent 25%), radial-gradient(circle at 17% 73%, rgba(97,146,128,.13), transparent 32%), radial-gradient(circle at 50% 48%, rgba(255,255,255,.035), transparent 39%);
+}
