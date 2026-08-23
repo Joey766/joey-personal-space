@@ -1,1 +1,37 @@
-.career-neo__experience-logo,.career-journey__logo{background-repeat:no-repeat;background-position:right center}.career-neo__experience-logo strong,.career-neo__experience-logo small,.career-journey__logo strong,.career-journey__logo span{display:none}.career-neo__experience-logo::before,.career-neo__experience-logo::after,.career-journey__logo::before{display:none}.career-neo__experience-logo--dahuan,.career-journey__logo--0{background-image:url('/logos/dahuan.png');background-size:68px auto}.career-neo__experience-logo--ey,.career-journey__logo--1{background-image:url('/logos/ey.png');background-size:72px auto}.career-neo__experience-logo--guotai,.career-journey__logo--2{background-image:url('/logos/guotai-haitong.png');background-size:178px auto}.career-neo__experience-logo--haikun,.career-journey__logo--3{background-image:url('/logos/haikun.png');background-size:158px auto}.career-neo__experience-logo--tianlong,.career-journey__logo--4{background-image:url('/logos/tianlong.png');background-size:178px auto}.career-journey__logo{width:180px;height:70px;min-width:180px}@media(max-width:760px){.career-journey__logo{display:none}}
+.career-neo__experience-logo,
+.career-journey__logo {
+  width: 180px;
+  min-width: 180px;
+  height: 70px;
+  min-height: 70px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.career-neo__experience-logo strong,
+.career-neo__experience-logo small,
+.career-journey__logo strong,
+.career-journey__logo span {
+  display: none;
+}
+
+.career-neo__experience-logo::before,
+.career-neo__experience-logo::after,
+.career-journey__logo::before {
+  display: none;
+}
+
+.career-neo__experience-logo--dahuan,
+.career-journey__logo--0 { background-image: url('/logos/dahuan.png'); background-size: 68px auto; }
+.career-neo__experience-logo--ey,
+.career-journey__logo--1 { background-image: url('/logos/ey.png'); background-size: 72px auto; }
+.career-neo__experience-logo--guotai,
+.career-journey__logo--2 { background-image: url('/logos/guotai-haitong.png'); background-size: 178px auto; }
+.career-neo__experience-logo--haikun,
+.career-journey__logo--3 { background-image: url('/logos/haikun.png'); background-size: 158px auto; }
+.career-neo__experience-logo--tianlong,
+.career-journey__logo--4 { background-image: url('/logos/tianlong.png'); background-size: 178px auto; }
+
+@media (max-width: 760px) {
+  .career-journey__logo { display: none; }
+}
