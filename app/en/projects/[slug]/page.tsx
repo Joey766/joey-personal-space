@@ -1,8 +1,10 @@
+import { notFound } from "next/navigation";
 import { ProjectDetail } from "../../../../components/ProjectDetail";
-import { LocaleControl } from "../../../../components/LocaleControl";
-import { en } from "../../../../content/en";
+import { getProject } from "../../../../content/projects";
 
-export default async function EnglishProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  return <><LocaleControl locale="en" path={`/en/projects/${slug}`} /><ProjectDetail content={en} locale="en" slug={slug} /></>;
+  const project = getProject(slug);
+  if (!project) notFound();
+  return <ProjectDetail project={project} locale="en" />;
 }

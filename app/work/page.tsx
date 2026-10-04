@@ -1,3 +1,3 @@
-import { CareerJourney } from "../../components/PersonalChapters";
+import { permanentRedirect } from "next/navigation";
 
-export default function WorkPage() { return <CareerJourney />; }
+export default function Page() { permanentRedirect("/career"); }

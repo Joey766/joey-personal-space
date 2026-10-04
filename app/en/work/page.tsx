@@ -1,4 +1,3 @@
-import { CareerJourney } from "../../../components/PersonalChapters";
-import { personalSpaceEn } from "../../../content/personal-space";
+import { permanentRedirect } from "next/navigation";
 
-export default function EnglishWorkPage() { return <CareerJourney content={personalSpaceEn} locale="en" />; }
+export default function Page() { permanentRedirect("/en/career"); }

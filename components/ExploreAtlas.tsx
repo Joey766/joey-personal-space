@@ -1,56 +1,62 @@
 "use client";
 
-import { SafeLink as Link } from "./SafeLink";
 import { useState } from "react";
 import { AmbientBackground } from "./AmbientBackground";
 import { ScrollReveal } from "./ScrollReveal";
+import { SiteHeader } from "./SiteHeader";
+import { SiteFooter } from "./SiteFooter";
+import type { Locale } from "../content/routes";
 import "./explore-atlas.css";
 
-const routeMap: Record<string, string> = {
-  "#top": "/",
-  "#about": "/explore",
-  "#career": "/work",
-  "#projects": "/projects",
-  "#life": "/life",
+type ExploreContent = {
+  about: {
+    title: string;
+    lead: string;
+    copy: string[];
+    cards: Array<{ title: string; copy: string; detail: string; tags: string[] }>;
+    timelineTitle: string;
+    timelineLead: string;
+    timeline: Array<{ year: string; copy: string; items?: string[] }>;
+  };
 };
 
-export function ExploreAtlas({ content, locale }: { content: any; locale: "zh" | "en" }) {
+export function ExploreAtlas({ content, locale }: { content: ExploreContent; locale: Locale }) {
   const [expanded, setExpanded] = useState<number | null>(null);
-  const base = locale === "zh" ? "" : "/en";
-  const linkFor = (href: string) => `${base}${routeMap[href] ?? href}`;
-  const otherLocale = locale === "zh" ? "/en/explore" : "/explore";
   const about = content.about;
 
   return <main className="explore-atlas">
     <AmbientBackground variant="explore" />
-    <header className="explore-atlas__header">
-      <Link className="explore-atlas__monogram" href={base || "/"} aria-label="AJ">AJ</Link>
-      <nav>{content.nav.map((item: any) => <Link href={linkFor(item.href)} key={item.label}>{item.label}</Link>)}</nav>
-      <Link className="explore-atlas__locale" href={otherLocale}>{content.language}</Link>
-    </header>
+    <SiteHeader locale={locale} path="/explore" />
 
-    <section className="explore-atlas__hero">
-      <ScrollReveal><p>{locale === "zh" ? "01 / 探索" : "01 / EXPLORE"}</p><h1>{about.title}</h1><h2>{about.lead}</h2></ScrollReveal>
+    <section className="explore-atlas__hero" aria-labelledby="explore-title">
+      <ScrollReveal>
+        <p className="explore-atlas__eyebrow">{locale === "zh" ? "01 / 探索" : "01 / EXPLORE"}</p>
+        <h1 id="explore-title">{about.title}</h1>
+        <p className="explore-atlas__lead">{about.lead}</p>
+        <div className="explore-atlas__story">{about.copy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      </ScrollReveal>
     </section>
 
-    <section className="explore-atlas__capabilities" aria-label={about.title}>
-      {about.cards.map((card: any, index: number) => {
+    <section className="explore-atlas__capabilities" aria-label={locale === "zh" ? "探索的三个方向" : "Three areas of exploration"}>
+      {about.cards.map((card, index) => {
         const isExpanded = expanded === index;
+        const detailId = `explore-detail-${index}`;
         return <ScrollReveal key={card.title} delay={index * 80}><article className={isExpanded ? "is-expanded" : ""}>
-          <button type="button" onClick={() => setExpanded(isExpanded ? null : index)} aria-expanded={isExpanded}>
-            <span>0{index + 1}</span><h3>{card.title}</h3><i>{isExpanded ? "−" : "+"}</i>
-          </button>
-          <div className="explore-atlas__card-copy"><p>{card.copy}</p><div>{card.tags.map((tag: string) => <span key={tag}>{tag}</span>)}</div></div>
-          <div className="explore-atlas__details" aria-hidden={!isExpanded}>{card.detail}</div>
+          <h2><button type="button" onClick={() => setExpanded(isExpanded ? null : index)} aria-expanded={isExpanded} aria-controls={detailId}>
+            <span className="explore-atlas__card-number" aria-hidden="true">0{index + 1}</span><span className="explore-atlas__card-title">{card.title}</span><i aria-hidden="true">{isExpanded ? "−" : "+"}</i>
+          </button></h2>
+          <div className="explore-atlas__card-copy"><p>{card.copy}</p><ul>{card.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></div>
+          <div id={detailId} className="explore-atlas__details" hidden={!isExpanded}>{card.detail}</div>
         </article></ScrollReveal>;
       })}
     </section>
 
-    <section className="explore-atlas__timeline">
-      <ScrollReveal><div className="explore-atlas__section-title"><span>02</span><h2>{about.timelineTitle}</h2><p>{about.timelineLead}</p></div></ScrollReveal>
+    <section className="explore-atlas__timeline" aria-labelledby="explore-timeline-title">
+      <ScrollReveal><div className="explore-atlas__section-title"><span aria-hidden="true">02</span><h2 id="explore-timeline-title">{about.timelineTitle}</h2><p>{about.timelineLead}</p></div></ScrollReveal>
       <div className="explore-atlas__timeline-list">
-        {about.timeline.map((item: any, index: number) => <ScrollReveal key={item.year} delay={index * 80}><article><time>{item.year}</time><i aria-hidden="true" /><div><p>{item.copy}</p>{item.items && <ul>{item.items.map((entry: string) => <li key={entry}>{entry}</li>)}</ul>}</div></article></ScrollReveal>)}
+        {about.timeline.map((item, index) => <ScrollReveal key={item.year} delay={index * 80}><article><time dateTime={item.year}>{item.year}</time><i aria-hidden="true" /><div><p>{item.copy}</p>{item.items && <ul>{item.items.map((entry) => <li key={entry}>{entry}</li>)}</ul>}</div></article></ScrollReveal>)}
       </div>
     </section>
+    <SiteFooter locale={locale} />
   </main>;
 }

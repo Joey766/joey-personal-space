@@ -1,7 +1,11 @@
+import { notFound, redirect } from "next/navigation";
 import { LifeArchive } from "../../../../components/LifeArchive";
-import { personalSpaceEn } from "../../../../content/personal-space";
+import { personalSpaceEn as content } from "../../../../content/personal-space";
 
-export default async function EnglishLifeDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function LifeDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  return <LifeArchive content={personalSpaceEn} locale="en" slug={slug} />;
+  const item = content.life.archive.find((entry) => entry.slug === slug);
+  if (!item) notFound();
+  if (slug !== "music") redirect(`/en/life#${slug}`);
+  return <LifeArchive content={content} locale="en" slug={slug} />;
 }

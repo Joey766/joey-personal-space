@@ -1,49 +1,42 @@
+import { educationStoryByLocale } from "./profile";
+
 export const zh = {
-  language: "中文 / EN", nav: [{ label: "探索", href: "#about" }, { label: "构建", href: "#projects" }, { label: "思考", href: "#notes" }, { label: "生活", href: "#life" }],
-  welcome: { eyebrow: "罗敖杰 · 个人空间", title: ["欢迎进入", "我的个人空间"], line: "数学 · 人工智能 · 产品创造", enter: "进入空间", projects: "进入构建" }, bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "构建", href: "#projects" }, { number: "03", label: "思考", href: "#notes" }, { number: "04", label: "生活", href: "#life" }],
-  about: { number: "01", title: "探索", lead: "罗敖杰", copy: ["一名就读于滑铁卢大学数学系的学生，目前主修金融分析与风险管理（Financial Analysis and Risk Management）。", "我希望结合数学思维、数据能力与人工智能技术，将想法转化为能够解决真实问题的产品。"], facts: ["University of Waterloo\nBachelor of Mathematics, Honours", "FARM · PRM\nAI · 数据 · 产品开发"], cards: [{ title: "数学基础", copy: "数学训练帮助我通过模型、逻辑和结构化分析理解复杂问题。", tags: ["Financial Analysis and Risk Management", "Risk Modeling", "Quantitative Thinking"] }, { title: "人工智能", copy: "探索人工智能如何改变软件开发方式，以及人与技术之间新的交互方式。", tags: ["LLM", "Computer Vision", "AI-native Development"] }, { title: "产品创造", copy: "尝试从真实需求出发，将技术能力转化为用户可以使用的产品。", tags: ["Product Design", "Rapid Prototyping", "User Experience"] }], timeline: [{ year: "2023", copy: "进入 University of Waterloo 数学系" }, { year: "2024", copy: "建立数学、数据分析和编程能力" }, { year: "2025", copy: "参与金融、证券和商业项目实践" }, { year: "2026", copy: "探索 AI 产品开发，并构建 Zhiyue AI" }] },
-  projects: { number: "02", title: "作品与实验", lead: "从问题出发，持续把技术、模型和产品想法变成可用的东西。", items: [{ slug: "zhiyue-ai", title: "Zhiyue AI", subtitle: "AI 求职助手 / AI 职业智能平台", copy: "一个帮助用户理解个人背景、发现匹配机会，并获得职业发展建议的 AI 产品。", tags: "AI Product / LLM / Qwen3 / Ollama / Streamlit", workflow: ["上传简历", "AI 理解个人背景", "岗位匹配", "技能差距分析", "求职优化建议"], groups: [{ title: "Product", items: ["简历分析", "岗位匹配", "技能差距分析"] }, { title: "AI", items: ["Qwen3", "Ollama", "LLM workflow"] }, { title: "Engineering", items: ["Python", "Streamlit", "GitHub Deployment"] }] }, { slug: "robotics-vision", title: "AI机器人视觉定位系统", subtitle: "Embodied AI Robotics", copy: "探索计算机视觉与机器人系统结合的 Embodied AI 应用。", tags: "Python / OpenCV / YOLO / LeRobot / SO-ARM101", groups: [{ title: "技术关键词", items: ["Python", "OpenCV", "YOLO", "LeRobot", "SO-ARM101"] }] }, { slug: "personal-space", title: "Joey Luo Personal Space", subtitle: "AI-native personal website", copy: "一个通过 AI-native / Vibe Coding workflow 从 0 到 1 构建的个人数字空间。", tags: "Vibe Coding / Product Design / Next.js / React / Three.js", groups: [{ title: "构建方式", items: ["Codex assisted development", "Next.js", "React", "Three.js", "GSAP", "Framer Motion"] }] }, { slug: "credit-transition", title: "信用评级迁移模型", subtitle: "Quantitative Risk Modeling", copy: "使用 Markov Chain 模型研究汽车行业信用评级变化和长期风险。", tags: "Python / Markov Chain / Risk Modeling", groups: [{ title: "技术关键词", items: ["Python", "Markov Chain", "Risk Modeling"] }] }] },
-  notes: { number: "03", title: "思考", lead: "方法比答案更可迁移。", cards: [{ title: "数据驱动", copy: "数学和风险管理训练让我习惯通过数据、模型和结构化分析理解问题。" }, { title: "AI 原生", copy: "人工智能不仅提升效率，也正在改变软件开发和产品创造方式。" }, { title: "产品思维", copy: "技术最终需要服务真实用户需求，并转化为有价值的体验。" }], questions: ["AI 如何改变个人创造力？", "如何让 AI 真正解决人的问题？", "数学如何帮助理解智能系统？"], philosophy: "深入思考，快速构建，持续迭代。" },
-  life: { number: "04", title: "生活", lead: "技术之外，也有让我保持好奇与节奏的事。", cards: [{ title: "国际象棋", copy: "长期参与竞技国际象棋训练。", tags: ["FIDE Candidate Master (CM)", "Asian Age-Group Runner-up"] }, { title: "足球与运动", copy: "足球和团队运动帮助培养协作、沟通和竞争意识。", tags: ["足球", "篮球"] }, { title: "音乐", copy: "钢琴学习培养长期坚持和创造力。", tags: ["钢琴", "长期练习"] }] },
-  career: { number: "05", title: "职业档案", lead: "从金融，到数据，再到 AI 与产品。", link: "进入职业档案" }, contact: { number: "06", title: "联系", copy: "如果你想聊项目、AI、产品或金融，欢迎联系我。", links: ["Email", "GitHub", "LinkedIn"] }, projectBack: "返回构建", projectHome: "个人空间"
-};
-
-Object.assign(zh, {
-  nav: [{ label: "主页", href: "#top" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "探索", href: "#about" }, { label: "生活", href: "#life" }],
-  welcome: { ...zh.welcome, title: ["探索数学、数据与", "人工智能的无限可能"], line: ["就读于 University of Waterloo 数学系", "Financial Analysis and Risk Management"], enter: "继续探索" },
+  language: "中文 / EN",
+  nav: [{ label: "探索", href: "#about" }, { label: "职业", href: "#career" }, { label: "项目", href: "#projects" }, { label: "生活", href: "#life" }],
+  welcome: {
+    eyebrow: "罗敖杰 · 个人空间",
+    title: ["探索数学、数据与", "人工智能的无限可能"],
+    line: ["滑铁卢大学 · 数学荣誉学士在读", "金融分析与风险管理（FARM）"],
+    enter: "继续探索",
+  },
   bottom: [{ number: "01", label: "探索", href: "#about" }, { number: "02", label: "职业", href: "#career" }, { number: "03", label: "项目", href: "#projects" }, { number: "04", label: "生活", href: "#life" }],
-  about: { ...zh.about, lead: "从数学学习中的好奇与挑战开始，我逐渐发现数据、分析与逻辑推理的兴趣，并探索如何将数学思维延伸到人工智能与真实问题的解决中。", cards: [
-    { title: "量化思维", copy: "数学训练帮助我建立模型、分析复杂问题。", detail: "把金融分析、统计推理与风险建模连接到真实决策。", tags: ["Financial Analysis and Risk Management (FARM)", "统计学", "风险建模", "马尔可夫模型"] },
-    { title: "人工智能", copy: "探索人工智能技术，并通过 AI 原生工作流构建实际产品。", detail: "从语言模型到计算机视觉，关注能从洞察走向使用的智能系统。", tags: ["LLM", "计算机视觉", "Ollama", "Qwen", "Python"] },
-    { title: "产品创造", copy: "从真实需求出发，将技术能力转化为用户可以使用的产品。", detail: "以快速迭代连接产品设计、用户体验与工程实现。", tags: ["产品设计", "用户体验", "快速原型", "氛围编程"] },
-  ], timelineTitle: "职业时间线", timelineLead: "从数学学习、金融实践到 AI 产品构建的成长路径。", timeline: [
-    { year: "2023", copy: "进入 University of Waterloo 数学系" },
-    { year: "2024", copy: "学习统计、风险管理与数据分析" },
-    { year: "2025", copy: "进入金融与商业实践：", items: ["香港天龙证券", "国泰海通证券", "安永华明"] },
-    { year: "2026", copy: "探索 AI 产品开发：", items: ["上海大寰机器人", "Zhiyue AI"] },
-  ] },
-  projects: { ...zh.projects, items: [
-    { slug: "zhiyue-ai", title: "Zhiyue AI", subtitle: "AI 求职助手 / AI 职业智能平台", copy: "一个帮助用户理解个人背景、发现匹配机会，并获得职业发展建议的 AI 产品。", tags: "AI / LLM / Qwen3 / Ollama / Streamlit", workflow: ["上传简历", "AI 理解个人背景", "岗位匹配", "技能差距分析", "求职优化建议"], groups: [{ title: "产品", items: ["简历分析", "岗位匹配", "技能差距分析"] }, { title: "AI", items: ["Qwen3", "Ollama", "LLM 工作流"] }, { title: "工程实现", items: ["Python", "Streamlit", "GitHub 部署"] }] },
-    { slug: "robotics-vision", title: "AI 机器人视觉定位系统", subtitle: "具身智能机器人", copy: "探索计算机视觉与机器人系统结合的 AI 应用。", tags: "Python / OpenCV / YOLO / LeRobot / SO-ARM101", groups: [{ title: "技术关键词", items: ["Python", "OpenCV", "YOLO", "LeRobot", "SO-ARM101"] }] },
-    { slug: "personal-space", title: "罗敖杰个人空间", subtitle: "AI 原生个人网站", copy: "一个通过 AI 原生工作流与氛围编程从 0 到 1 构建的个人数字空间。", tags: "氛围编程 / 产品设计 / Next.js / React / Three.js", groups: [{ title: "构建方式", items: ["Codex 辅助开发", "Next.js", "React", "Three.js", "GSAP", "Framer Motion"] }] },
-    { slug: "credit-transition", title: "信用评级迁移模型", subtitle: "量化风险建模", copy: "使用马尔可夫链模型研究汽车行业信用评级变化和长期风险。", tags: "Python / 马尔可夫链 / 风险建模", groups: [{ title: "技术关键词", items: ["Python", "马尔可夫链", "风险建模"] }] },
-  ] },
-  career: { number: "02", title: "职业经历", lead: "从金融实践，到数据能力，再到 AI 与产品构建。", link: "查看完整职业档案" },
-});
-
-export const careerZh = {
-  language: "中文 / EN", back: "返回个人空间", backToTop: "回到顶部", indexLabel: "职业档案目录",
-  hero: { eyebrow: "职业档案 / CAREER", school: "University of Waterloo", direction: "数学 · AI · 产品 · Quantitative Thinking", intro: "一份关于学习、工作、项目与构建经历的完整记录。" },
-  index: [{ label: "教育", href: "#education" }, { label: "经历", href: "#experience" }, { label: "项目", href: "#projects" }, { label: "技术栈", href: "#skills" }, { label: "校园与更多", href: "#campus" }],
-  education: { number: "01 / EDUCATION", title: "Education", year: "2023—2027", school: "University of Waterloo", degree: "Bachelor of Mathematics, Honours", major: "Major: Financial Analysis and Risk Management (FARM) · Specialization: Professional Risk Management (PRM)", facts: ["Academic Standing: Distinction", "GRE 329", "Quantitative 170", "Verbal 159"], courses: "", honours: [] },
-  experience: { number: "02 / EXPERIENCE", title: "经历", mediaLabel: "公司标识", items: [
-    { company: "上海大寰机器人科技有限公司", role: "AI 训练与数据助理实习生", department: "具身智能研发部", date: "2026.03 — 2026.04", tag: "AI / ROBOTICS", mediaLabel: "ROBOTICS", details: ["使用 Codex、Python、OpenCV 与 YOLO 实例分割处理上千张多角度工件图像，实现自动分割、轮廓提取与标准化。", "构建粗筛—精匹配视觉定位流程，并完成 SO-ARM101 六轴机械臂搭建、标定和 LeRobot 演示数据采集。"] },
-    { company: "安永华明会计师事务所", role: "审计实习生 · 港股 IPO 项目", department: "", date: "2025.07 — 2025.08", tag: "AUDIT / IPO", mediaLabel: "IPO", details: ["使用 Excel 批量清洗和核验销售流水、合同、发票与凭证。", "参与港股 IPO 收入循环 Walk-through Test，核验合同至回款流程。"] },
-    { company: "国泰海通证券股份有限公司", role: "实习生 · 债券资本市场部", department: "", date: "2025.05 — 2025.06", tag: "FIXED INCOME", mediaLabel: "BONDS", details: ["使用 Wind、FICC 与 Excel 完成债券发行、收益率、利差和评级核验，并参与 100+ 份材料制作。", "使用 Python 支持日常数据清洗、汇总与市场复盘。"] },
-    { company: "深圳市海坤投资管理有限公司", role: "远程行研实习生", department: "行业研究部门", date: "2025.02 — 2025.09", tag: "RESEARCH", mediaLabel: "RESEARCH", details: ["独立撰写 AI 在线教育行业研究报告，结合 Wind 数据和 Python 分析营收、盈利及费用。", "进入报告审核组，负责数据核验、逻辑检查与修改建议。"] },
-    { company: "香港天龙证券有限公司", role: "基金经理助理", department: "", date: "2024.10 — 2025.01", tag: "FINANCE / PRODUCT", mediaLabel: "PRODUCT", details: ["参与“香港资管通”App 从 0 到 1 产品设计，规划策略展示及虚拟盘/实盘流程。", "完成商业计划书，并以 R 与 Excel 进行财务测算和投资收益率分析。"] }
-  ] },
-  projects: { number: "03 / PROJECTS", title: "Projects & Builds", view: "", items: [{ title: "Zhiyue AI", subtitle: "AI Job Search Assistant", copy: "构建 AI 求职助手，整合简历解析、职业偏好理解、岗位匹配与技能差距分析。", tools: "Ollama · Qwen3 · Streamlit · AI Product Design" }, { title: "AI Robot Vision Localization System", subtitle: "Computer Vision & Robotics", copy: "构建机器人感知视觉工作流，覆盖图像处理、目标检测与定位。", tools: "Python · OpenCV · YOLO · LeRobot" }, { title: "Bond Ratings in the Auto Industry", subtitle: "Markov Chain Credit Rating Model", copy: "构建马尔可夫链信用评级迁移模型，分析汽车行业债券评级动态。", tools: "Python · Markov Chain · Credit Risk Modeling" }] },
-  skills: { number: "04 / TECHNICAL STACK", title: "Technical Stack", groups: [{ title: "AI & Robotics", items: ["LLM", "Codex", "Ollama", "Qwen", "OpenCV", "YOLO", "LeRobot"] }, { title: "Programming & Data", items: ["Python", "R", "SQL", "SAS", "Excel / VBA"] }, { title: "Quantitative Modeling", items: ["Statistics", "Risk Management", "Credit Risk", "Markov Models"] }, { title: "Product Development", items: ["Product Design", "User Flow", "AI-assisted Development", "Vibe Coding"] }] },
-  campus: { number: "05 / BEYOND", title: "Beyond", club: { title: "Chess", role: "FIDE Candidate Master (CM)", details: ["Asian Age Group Runner-up", "University of Waterloo Chess Club"] }, notes: [{ title: "Sports", copy: "Football · Basketball · Table Tennis" }, { title: "Music", copy: "Piano" }] },
+  about: {
+    number: "01", title: "探索",
+    lead: "从数学和风险管理出发，探索数据、人工智能与产品之间的连接。",
+    copy: [educationStoryByLocale.zh, "在金融实践、AI 产品和机器人视觉工作中，我尝试把数学思维与数据分析用于具体问题。"],
+    cards: [
+      { title: "量化思维", copy: "通过数学、统计和风险模型，理解问题中的结构与不确定性。", detail: "在 STAT 334 四人课程项目中担任组长，与团队使用给定的 S&P 转移矩阵比较多期评级迁移，并在模型假设下解释长期行为。", tags: ["数学与统计", "风险管理", "马尔可夫链"] },
+      { title: "人工智能", copy: "从语言模型到计算机视觉，探索 AI 在具体任务中的用法。", detail: "职跃 AI 中不同岗位的匹配评分一度过于相似；机器人实习中也遇到模型迁移效果不稳定的问题。两段实践都需要从实际输出排查问题，再调整逻辑并验证。", tags: ["Ollama · Qwen3", "OpenCV · YOLO", "Python"] },
+      { title: "产品创造", copy: "把需求与技术连接起来，逐步构建可以使用的产品体验。", detail: "香港资管通的设计从用户有限的时间出发，决定首页指标与策略信息的展示顺序；职跃 AI 则在复杂度与稳定性之间缩小范围，优先让用户查看相关 JD。", tags: ["信息优先级", "AI 产品", "产品取舍"] },
+    ],
+    timelineTitle: "探索的路径",
+    timelineLead: "学习、实践与个人项目，逐步连接成一条路径。",
+    timeline: [
+      { year: "2023", copy: "进入滑铁卢大学数学系。" },
+      { year: "2024", copy: "在香港天龙证券开始金融与产品流程实践。", items: ["投资分析", "香港资管通用户流程"] },
+      { year: "2025", copy: "继续金融与行业研究实践，开始职跃 AI，并担任 STAT 334 四人课程项目组长。", items: ["金融与研究", "Zhiyue AI", "信用评级迁移"] },
+      { year: "2026", copy: "在大寰机器人参与视觉定位工作，并构建这个双语个人空间。", items: ["机器人视觉", "Personal Space"] },
+    ],
+  },
+  // Kept for a future Thoughts chapter; currently absent from public navigation.
+  notes: {
+    number: "03", title: "思考", lead: "方法比答案更可迁移。",
+    cards: [
+      { title: "数据驱动", copy: "数学和风险管理训练让我习惯通过数据、模型和结构化分析理解问题。" },
+      { title: "AI 原生", copy: "人工智能不仅提升效率，也正在改变软件开发和产品创造方式。" },
+      { title: "产品思维", copy: "技术最终需要服务真实用户需求，并转化为有价值的体验。" },
+    ],
+    questions: ["AI 如何改变个人创造力？", "如何让 AI 真正解决人的问题？", "数学如何帮助理解智能系统？"],
+    philosophy: "深入思考，快速构建，持续迭代。",
+  },
 };

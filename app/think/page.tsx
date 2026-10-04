@@ -1,1 +1,4 @@
-import { BrandPage } from "../../components/BrandPage"; import { zh } from "../../content/zh"; export default function Page() { return <BrandPage content={zh} locale="zh" page="think" />; }
+import { redirect } from "next/navigation";
+
+// Notes can reopen when the archive has real content.
+export default function Page() { redirect("/explore"); }
