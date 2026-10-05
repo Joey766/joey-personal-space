@@ -2,6 +2,8 @@
 
 A bilingual cinematic personal website for Joey Luo, with Explore, Career, Projects, and Life chapters.
 
+Visit the [live Personal Space](https://joey-personal-space.vercel.app/), including the [English version](https://joey-personal-space.vercel.app/en).
+
 ## Structure
 
 - Chinese routes start at `/`; English routes start at `/en`.
@@ -10,7 +12,7 @@ A bilingual cinematic personal website for Joey Luo, with Explore, Career, Proje
 - All six Life categories remain. Only Music has an available archive; the other cards preserve their visual identity without opening placeholder pages.
 - Project order and facts are shared in `content/projects.ts`; contact links live in `content/contact.ts`.
 - Education and the four technical-toolkit groups share one source in `content/profile.ts`; both languages use the latest Chinese and English recruiting resumes plus the user's confirmed project context. The STAT 334 report supplies model inputs and results.
-- GitHub links point to the public profile. Zhiyue has no source/demo link, and the private Personal Space repository is not a public project CTA.
+- GitHub links point to the public profile. Zhiyue has no source/demo link. Reference CVs and academic reports remain private source materials, outside the public site and repository.
 
 ## Implementation
 

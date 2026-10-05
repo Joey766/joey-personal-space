@@ -15,7 +15,7 @@ export type PortfolioProject = {
 
 // Facts: latest bilingual recruiting resumes pp. 1–2, user clarifications,
 // final STAT 334 report pp. 1–19, and this repository.
-// The source PDFs and private repository are not public downloads.
+// The source PDFs remain private reference materials, not public downloads.
 export const portfolioProjects: PortfolioProject[] = [
   {
     slug: "zhiyue-ai", period: { zh: "2025.06 起", en: "Since June 2025" },
